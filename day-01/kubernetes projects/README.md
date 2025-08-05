@@ -29,12 +29,12 @@ Verified correct image, labels, and container name
 Command Output	Description
 Pod creation and verification via CLI
 
-## 💡 What I Learned
-How to define and apply a basic pod configuration using YAML
+## 📈 Real-World Use Cases
+Web Hosting: Deploying NGINX as a static file server or reverse proxy
 
-The importance of metadata like labels and container naming in Kubernetes
+Ingress Controllers: NGINX is often used in Kubernetes ingress for routing traffic
 
-Using kubectl describe and kubectl get to inspect running workloads
+Labeling Strategy: Labeling is key in production for managing thousands of pods with selectors
 
 ## 🔗 Related Tools
 Kubernetes
