@@ -27,20 +27,20 @@ While this is a basic pod deployment, it's representative of real-world scenario
 Create the pod: 
 kubectl apply -f pod.yaml
 
-![Pod creation](screenshots/pod-details.png)
-
 Check pod status: kubectl get pods
 
+![Pod creation](screenshots/pod-nginx-created-status.png)
+
 Describe the pod (to verify container name, image, etc.): kubectl describe pod pod-nginx
+
+![Pod description](screenshots/pod-details).
+
+![Pod.yaml](pod-nginx.yaml).
 
 ## ✅ Outcome
 Pod successfully created and running
 
 Verified correct image, labels, and container name
-
-📸 Screenshots
-Command Output	Description
-Pod creation and verification via CLI
 
 ## 📈 Real-World Use Cases
 Web Hosting: Deploying NGINX as a static file server or reverse proxy
