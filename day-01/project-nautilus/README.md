@@ -32,7 +32,10 @@ Connect to App Server 3 (stapp03) using SSH:
 ssh banner@stapp03
 ⚠️ Password was be provided by the training environment.
 
-### ✅ Step 3: Create the User siva with a Non-Interactive Shell
+### ✅ Step 3: Verify user does not already exist
+ id siva
+
+### ✅ Step 4: Create the User siva with a Non-Interactive Shell
 Once inside stapp03, create the user:
 
 sudo useradd -s /sbin/nologin siva
@@ -44,7 +47,7 @@ useradd – Command to add user
 
 This ensures siva cannot log in but still exists as a valid system user for the backup process.
 
-### 🔍 Step 4: Verify the User
+### 🔍 Step 5: Verify the User
 Check the /etc/passwd file to verify the user was created with the correct shell:
 
 grep siva /etc/passwd
@@ -75,4 +78,4 @@ Navigating multi-server infrastructure using Jump Hosts (bastion architecture)
 ### 💬 Reflection
 Even simple user creation can have huge implications in production environments. This task reflects what DevOps professionals must consider daily: automation, access control, and compliance, while ensuring the system remains safe and maintainable.
 
-📌 “DevOps is not just about automation, it's about building secure, scalable, and smart systems, one command at a time.”
+### Step 1: 
