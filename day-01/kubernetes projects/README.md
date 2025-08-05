@@ -20,7 +20,7 @@ While this is a basic pod deployment, it's representative of real-world scenario
 - **Labels** allow fine-grained control over deployments, monitoring, scaling, and service discovery
 - **kubectl** is used by DevOps/SRE teams to manage containerized workloads at scale
 
-> In enterprise DevOps, even the most complex CI/CD pipelines boil down to applying these core building blocks at scale and with automation.
+In enterprise DevOps, even the most complex CI/CD pipelines boil down to applying these core building blocks at scale and with automation.
 
 ---
 
