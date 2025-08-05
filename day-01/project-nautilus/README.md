@@ -21,7 +21,6 @@ To maintain **security and automation standards**, backup agents must run under 
 ## 🔧 Step-by-step Breakdown
 
 ### 🟩 Step 1: Log in to the Jump Host (Control Server)
-
 The KodeKloud environment provides a **jump host** (a gateway server) where access begins:
 
 thor@jump_host $
@@ -49,9 +48,11 @@ This ensures siva cannot log in but still exists as a valid system user for the 
 Check the /etc/passwd file to verify the user was created with the correct shell:
 
 grep siva /etc/passwd
+
 Expected output:
 
 siva:x:1002:1002::/home/siva:/sbin/nologin
+
 This confirms:
 
 User exists
@@ -63,7 +64,6 @@ Uses a non-interactive shell
 💡 Testing the login with su - siva would have the access denied.
 
 ### 🧠 What I Learned
-
 Importance of non-interactive users for automation tooling
 
 How to harden production servers using minimal access principles
@@ -73,7 +73,6 @@ Practical user management in Linux
 Navigating multi-server infrastructure using Jump Hosts (bastion architecture)
 
 ### 💬 Reflection
-
 Even simple user creation can have huge implications in production environments. This task reflects what DevOps professionals must consider daily: automation, access control, and compliance, while ensuring the system remains safe and maintainable.
 
 📌 “DevOps is not just about automation, it's about building secure, scalable, and smart systems, one command at a time.”
