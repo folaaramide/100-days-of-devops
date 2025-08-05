@@ -22,8 +22,6 @@ While this is a basic pod deployment, it's representative of real-world scenario
 
 In enterprise DevOps, even the most complex CI/CD pipelines boil down to applying these core building blocks at scale and with automation.
 
----
-
 ## 🚀 Commands Used
 
 Create the pod: 
