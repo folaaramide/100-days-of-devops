@@ -61,6 +61,7 @@ Using Terraform to provision infrastructure in a cloud-agnostic, repeatable way.
 
 ## 📅 Daily Progress
 
+Each day contains subfolders for the three projects.
 Inside each, you’ll find:
 - `README.md` – description, steps, learnings
 - `/code` – actual scripts, manifests, configs
@@ -94,6 +95,3 @@ If you're a recruiter, hiring manager, or fellow DevOps learner – feel free to
 ---
 
 > 📌 _“Infrastructure as code is more than automation – it’s a discipline, a mindset, and a roadmap to scalable systems.”_
-
-
-Each day contains subfolders for the three projects:
