@@ -33,9 +33,9 @@ Check pod status: kubectl get pods
 
 Describe the pod (to verify container name, image, etc.): kubectl describe pod pod-nginx
 
-![Pod description](screenshots/pod-details).
+![Pod description](screenshots/pod-details)
 
-![Pod.yaml](pod-nginx.yaml).
+![Pod.yaml](pod-nginx.yaml)
 
 ## ✅ Outcome
 Pod successfully created and running
