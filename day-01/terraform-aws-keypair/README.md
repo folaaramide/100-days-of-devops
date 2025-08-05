@@ -40,14 +40,17 @@ This project was completed as part of a hands-on lab from [KodeKloud](https://ko
 ### Change into the Terraform working directory
 cd /home/bob/terraform
 
+![Terraform code](screenshots/main.tf.png)
+
 ### Initialize Terraform
 terraform init
 
-![Terraform init](screenshots/terraform-init.png)
+![Terraform input](screenshots/terraform-init.png)
 
 ### Apply the configuration
 terraform apply
-![Terraform apply](screenshots/terraform-apply.png)
+
+![Terraform output](screenshots/terraform-apply.png)
 
 When prompted, type yes to confirm.
 
@@ -61,16 +64,6 @@ Expected output:
 -rw------- 1 bob bob 3243 Aug 05 12:34 /home/bob/nautilus-kp.pem
 
 ![PEM file](screenshots/pem-file-listing-permissions.png)
-📸 Screenshots
-You can include screenshots in a /screenshots/ folder and reference them here.
-
-Terraform Code (main.tf)
-
-Terminal Output: terraform init
-
-Terminal Output: terraform apply
-
-PEM file listing and permissions
 
 ## 🧠 What I Learned
 How to generate SSH key pairs using Terraform
