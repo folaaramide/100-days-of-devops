@@ -40,7 +40,7 @@ This project was completed as part of a hands-on lab from [KodeKloud](https://ko
 ### Change into the Terraform working directory
 cd /home/bob/terraform
 
-![Terraform code](screenshots/main.tf.png)
+![Terraform code](screenshots/terraform-main.tf.png)
 
 ### Initialize Terraform
 terraform init
