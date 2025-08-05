@@ -37,17 +37,18 @@ This project was completed as part of a hands-on lab from [KodeKloud](https://ko
 
 ## 🚀 Usage (Reproducible Steps)
 
-# Change into the Terraform working directory
+### Change into the Terraform working directory
 cd /home/bob/terraform
 
-# Initialize Terraform
+### Initialize Terraform
 terraform init
 
-# Apply the configuration
+### Apply the configuration
 terraform apply
+
 When prompted, type yes to confirm.
 
-✅ Output Verification
+### ✅ Output Verification
 Check the generated PEM file:
 
 ls -l /home/bob/nautilus-kp.pem
