@@ -11,6 +11,19 @@ The goal was to create a Kubernetes Pod that runs the `nginx` web server. This i
 - Naming the container **`nginx-container`**
 - Adding a label: `app=nginx_app`
 
+## 🚀 Why This Project Matters
+
+While this is a basic pod deployment, it's representative of real-world scenarios where:
+
+- **Containers** serve APIs, static websites, or reverse proxy layers (like NGINX)
+- **YAML manifests** are used for version-controlled Infrastructure as Code (IaC)
+- **Labels** allow fine-grained control over deployments, monitoring, scaling, and service discovery
+- **kubectl** is used by DevOps/SRE teams to manage containerized workloads at scale
+
+> In enterprise DevOps, even the most complex CI/CD pipelines boil down to applying these core building blocks at scale and with automation.
+
+---
+
 ## 🚀 Commands Used
 
 Create the pod: 
@@ -42,5 +55,9 @@ Kubernetes
 kubectl
 
 Docker (for container image)
+
+YAML
+
+Linux(CLI)
 
 🔁 Stay tuned for more as I continue through the 100 Days of DevOps challenge!
