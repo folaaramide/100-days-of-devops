@@ -35,7 +35,7 @@ Describe the pod (to verify container name, image, etc.): kubectl describe pod p
 
 ![Pod description](screenshots/pod-details)
 
-![Pod.yaml](pod-nginx.yaml)
+![Pod yaml](screenshots/pod-nginx.yaml)
 
 ## ✅ Outcome
 Pod successfully created and running
