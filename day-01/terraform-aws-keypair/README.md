@@ -43,8 +43,11 @@ cd /home/bob/terraform
 ### Initialize Terraform
 terraform init
 
+![Terraform init](screenshots/terraform-init.png)
+
 ### Apply the configuration
 terraform apply
+![Terraform apply](screenshots/terraform-apply.png)
 
 When prompted, type yes to confirm.
 
@@ -57,6 +60,7 @@ Expected output:
 
 -rw------- 1 bob bob 3243 Aug 05 12:34 /home/bob/nautilus-kp.pem
 
+![PEM file](screenshots/pem-file-listing-permissions.png)
 📸 Screenshots
 You can include screenshots in a /screenshots/ folder and reference them here.
 
