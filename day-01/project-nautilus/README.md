@@ -27,13 +27,13 @@ The KodeKloud environment provides a **jump host** (a gateway server) where acce
 thor@jump_host $
 This jump host connects to all app servers securely.
 
-🟩 Step 2: SSH into App Server 3
+### 🟩 Step 2: SSH into App Server 3
 Connect to App Server 3 (stapp03) using SSH:
 
 ssh banner@stapp03
 ⚠️ Password was be provided by the training environment.
 
-✅ Step 3: Create the User siva with a Non-Interactive Shell
+### ✅ Step 3: Create the User siva with a Non-Interactive Shell
 Once inside stapp03, create the user:
 
 sudo useradd -s /sbin/nologin siva
@@ -45,7 +45,7 @@ useradd – Command to add user
 
 This ensures siva cannot log in but still exists as a valid system user for the backup process.
 
-🔍 Step 4: Verify the User
+### 🔍 Step 4: Verify the User
 Check the /etc/passwd file to verify the user was created with the correct shell:
 
 grep siva /etc/passwd
@@ -62,7 +62,8 @@ Uses a non-interactive shell
 
 💡 Testing the login with su - siva would have the access denied.
 
-🧠 What I Learned
+### 🧠 What I Learned
+
 Importance of non-interactive users for automation tooling
 
 How to harden production servers using minimal access principles
@@ -71,7 +72,8 @@ Practical user management in Linux
 
 Navigating multi-server infrastructure using Jump Hosts (bastion architecture)
 
-💬 Reflection
+### 💬 Reflection
+
 Even simple user creation can have huge implications in production environments. This task reflects what DevOps professionals must consider daily: automation, access control, and compliance, while ensuring the system remains safe and maintainable.
 
 📌 “DevOps is not just about automation, it's about building secure, scalable, and smart systems, one command at a time.”
