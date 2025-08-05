@@ -1,4 +1,4 @@
-# Day 1 - Kubernetes: Create a Pod
+# Day 1 - Kubernetes Pod Deployment: NGINX on Kubernetes with YAML
 
 As part of my #100DaysOfDevOps challenge, I worked with Kubernetes to create a basic Pod using the `kubectl` CLI tool.
 
