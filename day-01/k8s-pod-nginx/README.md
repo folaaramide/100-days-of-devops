@@ -27,6 +27,8 @@ While this is a basic pod deployment, it's representative of real-world scenario
 Create the pod: 
 kubectl apply -f pod.yaml
 
+![Pod creation](screenshots/pod-details.png)
+
 Check pod status: kubectl get pods
 
 Describe the pod (to verify container name, image, etc.): kubectl describe pod pod-nginx
