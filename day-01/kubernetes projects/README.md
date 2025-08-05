@@ -11,20 +11,6 @@ The goal was to create a Kubernetes Pod that runs the `nginx` web server. This i
 - Naming the container **`nginx-container`**
 - Adding a label: `app=nginx_app`
 
-## 📄 pod.yaml
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: pod-nginx
-  labels:
-    app: nginx_app
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:latest
-
 ## 🚀 Commands Used
 
 Create the pod: 
@@ -50,7 +36,7 @@ The importance of metadata like labels and container naming in Kubernetes
 
 Using kubectl describe and kubectl get to inspect running workloads
 
-🔗 Related Tools
+## 🔗 Related Tools
 Kubernetes
 
 kubectl
@@ -58,3 +44,18 @@ kubectl
 Docker (for container image)
 
 🔁 Stay tuned for more as I continue through the 100 Days of DevOps challenge!
+
+## 📄 pod.yaml
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nginx
+  labels:
+    app: nginx_app
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:latest
+
