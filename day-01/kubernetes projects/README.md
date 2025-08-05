@@ -44,18 +44,3 @@ kubectl
 Docker (for container image)
 
 🔁 Stay tuned for more as I continue through the 100 Days of DevOps challenge!
-
-## 📄 pod.yaml
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: pod-nginx
-  labels:
-    app: nginx_app
-spec:
-  containers:
-    - name: nginx-container
-      image: nginx:latest
-
