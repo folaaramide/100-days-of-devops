@@ -64,6 +64,8 @@ Has correct home directory
 
 Uses a non-interactive shell
 
+![CLI](screenshot/jump_host.png)
+
 💡 Testing the login with su - siva would have the access denied.
 
 ### 🧠 What I Learned
