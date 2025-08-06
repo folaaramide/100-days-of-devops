@@ -37,7 +37,7 @@ The following application servers were updated:
 ssh tony@stapp01    # then repeat for steve@stapp02 and banner@stapp03
 
 ### 🔹 Step 2: Verify Current Root SSH Setting
-sudo grep -i '^PermitRootLogin' /etc/ssh/sshd_config
+sudo grep PermitRootLogin /etc/ssh/sshd_config
 
 ![Default setting](./screenshots/stapp01-before-grep.png)
 
