@@ -55,12 +55,14 @@ This particular security group supports **App Server provisioning**, ensuring th
 
 5. **(Optional) Inspected the resource state with:** terraform show
 
-![Final Output](screenshots/terraform-output.png)
+![Final Output](screenshots/terraform-show.png)
 	
 
 ### 📌 Key Terraform Configuration (main.tf)
 
-![Terraform configuration](screenshots/main.tf.png)
+![Terraform configuration](screenshots/main.tf1.png)
+
+![Terraform configuration](screenshots/main.tf2.png)
 
 
 ## 📈 Outcome
