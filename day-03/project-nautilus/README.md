@@ -39,7 +39,7 @@ ssh tony@stapp01    # then repeat for steve@stapp02 and banner@stapp03
 ### 🔹 Step 2: Verify Current Root SSH Setting
 sudo grep -i '^PermitRootLogin' /etc/ssh/sshd_config
 
-📸 Screenshot taken showing default or commented-out setting
+![Default setting](./screenshots/stapp01-before-grep.png)
 
 ### 🔹 Step 3: Edit SSH Configuration
 Used vi to edit the SSH daemon config file:
@@ -50,13 +50,15 @@ Updated (or added) the line:
 
 PermitRootLogin no
 
-📸 Screenshot showing updated config with PermitRootLogin no
+![config with PermitRootLogin no](./screenshots/stapp01-edited-config.png)
 
 ### 🔹 Step 4: Restart SSH Service
 sudo systemctl restart sshd
 
 sudo systemctl status sshd
-📸 Screenshot showing SSH service restarted and active
+
+![SSH restarted and active](./screenshots/stapp01-ssh-restarted.png)
+
 
 ### 🔹 Step 5: Confirm Root SSH Login Is Denied
 From the jump host or app server:
@@ -67,7 +69,9 @@ Observed behavior:
 
 root@stapp01's password:
 Connection closed by 172.16.238.10 port 22
-📸 Screenshot showing root login blocked — connection closed
+
+
+![Root login blocked](./screenshots/all-servers-root-denied.png)
 
 ### 🧪 Verification Completed On:
 Host	PermitRootLogin	SSH Restarted	Root Login Blocked
@@ -87,9 +91,7 @@ stapp01-edited-config.png
 
 stapp01-ssh-restarted.png
 
-stapp01-root-denied.png
-
-... and the same for stapp02 and stapp03
+... and the same for stapp02 and stapp03, with a single screenshot showing that all servers had their root logins denied.
 
 📂 You can view these in the /screenshots folder.
 
