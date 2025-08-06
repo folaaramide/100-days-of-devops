@@ -48,7 +48,7 @@ Ensuring repeatable, declarative deployments
 
 Such practices align with:
 
-## 🔐 Security policies (centralized access via jump host)
+🔐 Security policies (centralized access via jump host)
 
 🔄 CI/CD pipelines
 
