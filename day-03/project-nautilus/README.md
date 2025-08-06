@@ -1,83 +1,113 @@
-# 📅 Day 01 – xFusionCorp (Project Nautilus)
+# 🔒 Day 03- Securing SSH Access: Disabling Root Login on Linux Servers
 
-## 🎯 Task
+## 🧠 Objective
 
-Create a Linux user named `siva` on `App Server 3 (stapp03)` with a **non-interactive shell**, to be used by a **backup agent** tool that requires secure system access without login privileges.
-
----
-
-## ✅ Business Context
-
-**Project Nautilus** is a critical naval platform under xFusionCorp Industries, supporting smart procurement and operational readiness across unmanned and manned maritime systems.
-
-To maintain **security and automation standards**, backup agents must run under restricted system accounts. This task reflects real-world DevOps responsibilities like:
-
-- Enforcing **least privilege access**
-- Preventing interactive logins for automation accounts
-- Securing access to production servers
+As part of the **100 Days of Kloud** challenge and enterprise security hardening initiative, I completed a project to **disable direct root SSH login** across all app servers in the **Stratos Datacenter**. This was based on updated security policies after an internal audit by the xFusionCorp security team.
 
 ---
 
-## 🔧 Step-by-step Breakdown
+## 💼 Business Value
 
-### 🟩 Step 1: Log in to the Jump Host (Control Server)
-The KodeKloud environment provides a **jump host** (a gateway server) where access begins:
+Disabling direct root SSH access significantly improves server security by:
 
-thor@jump_host $
-This jump host connects to all app servers securely.
+- Reducing the attack surface for brute-force and credential-stuffing attacks
+- Enforcing the principle of least privilege (users log in with limited accounts and escalate with `sudo` only when needed)
+- Making all administrative activity traceable to specific user accounts, enhancing auditability
 
-### 🟩 Step 2: SSH into App Server 3
-Connect to App Server 3 (stapp03) using SSH:
+This is a standard best practice in securing Linux servers in production environments.
 
-ssh banner@stapp03
-⚠️ Password was be provided by the training environment.
+---
 
-### ✅ Step 3: Verify user does not already exist
- id siva
+## 🖥️ Target Systems
 
-### ✅ Step 4: Create the User siva with a Non-Interactive Shell
-Once inside stapp03, create the user:
+The following application servers were updated:
 
-sudo useradd -s /sbin/nologin siva
-sudo – Run with admin privileges
+| Hostname   | IP Address      | User         |
+|------------|------------------|--------------|
+| stapp01    | 172.16.238.10    | `tony`       |
+| stapp02    | 172.16.238.11    | `steve`      |
+| stapp03    | 172.16.238.12    | `banner`     |
 
-useradd – Command to add user
+---
 
--s /sbin/nologin – Assign a shell that prevents login
+## 🔧 Implementation Walkthrough
 
-This ensures siva cannot log in but still exists as a valid system user for the backup process.
+### 🔹 Step 1: SSH into Each App Server via the Jump Host
 
-### 🔍 Step 5: Verify the User
-Check the /etc/passwd file to verify the user was created with the correct shell:
+ssh tony@stapp01    # then repeat for steve@stapp02 and banner@stapp03
 
-grep siva /etc/passwd
+### 🔹 Step 2: Verify Current Root SSH Setting
+sudo grep -i '^PermitRootLogin' /etc/ssh/sshd_config
 
-Expected output:
+📸 Screenshot taken showing default or commented-out setting
 
-siva:x:1002:1002::/home/siva:/sbin/nologin
+### 🔹 Step 3: Edit SSH Configuration
+Used vi to edit the SSH daemon config file:
 
-This confirms:
+sudo vi /etc/ssh/sshd_config
 
-User exists
+Updated (or added) the line:
 
-Has correct home directory
+PermitRootLogin no
 
-Uses a non-interactive shell
+📸 Screenshot showing updated config with PermitRootLogin no
 
-![CLI](screenshot/jump_host.png)
+### 🔹 Step 4: Restart SSH Service
+sudo systemctl restart sshd
 
-💡 Testing the login with su - siva would have the access denied.
+sudo systemctl status sshd
+📸 Screenshot showing SSH service restarted and active
 
-### 🧠 What I Learned
-Importance of non-interactive users for automation tooling
+###🔹 Step 5: Confirm Root SSH Login Is Denied
+From the jump host or app server:
 
-How to harden production servers using minimal access principles
+ssh root@stapp01
 
-Practical user management in Linux
+Observed behavior:
 
-Navigating multi-server infrastructure using Jump Hosts (bastion architecture)
+root@stapp01's password:
+Connection closed by 172.16.238.10 port 22
+📸 Screenshot showing root login blocked — connection closed
 
-### 💬 Reflection
-Even simple user creation can have huge implications in production environments. This task reflects what DevOps professionals must consider daily: automation, access control, and compliance, while ensuring the system remains safe and maintainable.
+🧪 Verification Completed On:
+Host	PermitRootLogin	SSH Restarted	Root Login Blocked
+stapp01	✅	✅	✅
+stapp02	✅	✅	✅
+stapp03	✅	✅	✅
 
-### Step 1: 
+🖼️ Evidence
+All key steps were documented with screenshots and saved in the /screenshots directory:
+
+stapp01-before-grep.png
+
+stapp01-edited-config.png
+
+stapp01-ssh-restarted.png
+
+stapp01-root-denied.png
+
+... and the same for stapp02 and stapp03
+
+📂 You can view these in the /screenshots folder.
+
+🏁 Outcome
+Successfully disabled direct root SSH login on all app servers in compliance with xFusionCorp security policies. This enhanced the security posture of the environment by enforcing named user access and reducing privilege escalation vectors.
+
+👨‍💻 Skills Demonstrated
+Linux system administration
+
+SSH and server hardening
+
+Editing and managing daemon config files
+
+Systemd service management
+
+Verifying real-world security controls
+
+Professional documentation and screenshot capture
+
+📣 Final Note
+This task was completed as part of the 100 Days of Kloud challenge on KodeKloud's DevOps learning platform, focused on mastering hands-on DevOps and SRE skills through real-world projects.
+
+
+---
