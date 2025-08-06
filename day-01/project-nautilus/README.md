@@ -79,5 +79,3 @@ Navigating multi-server infrastructure using Jump Hosts (bastion architecture)
 
 ### 💬 Reflection
 Even simple user creation can have huge implications in production environments. This task reflects what DevOps professionals must consider daily: automation, access control, and compliance, while ensuring the system remains safe and maintainable.
-
-### Step 1: 
