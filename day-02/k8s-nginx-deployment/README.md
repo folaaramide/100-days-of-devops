@@ -11,7 +11,9 @@ As part of the **Nautilus DevOps project**, I worked on deploying a containerize
 ## 🎯 Objectives
 
 ✅ Create a Kubernetes **deployment** named `nginx`
+
 ✅ Use the image `nginx:latest`
+
 ✅ Verify that the deployment and pods are running successfully
 
 ---
