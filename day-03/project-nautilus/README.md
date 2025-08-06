@@ -58,7 +58,7 @@ sudo systemctl restart sshd
 sudo systemctl status sshd
 📸 Screenshot showing SSH service restarted and active
 
-###🔹 Step 5: Confirm Root SSH Login Is Denied
+### 🔹 Step 5: Confirm Root SSH Login Is Denied
 From the jump host or app server:
 
 ssh root@stapp01
@@ -69,13 +69,16 @@ root@stapp01's password:
 Connection closed by 172.16.238.10 port 22
 📸 Screenshot showing root login blocked — connection closed
 
-🧪 Verification Completed On:
+### 🧪 Verification Completed On:
 Host	PermitRootLogin	SSH Restarted	Root Login Blocked
+
 stapp01	✅	✅	✅
+
 stapp02	✅	✅	✅
+
 stapp03	✅	✅	✅
 
-🖼️ Evidence
+### 🖼️ Evidence
 All key steps were documented with screenshots and saved in the /screenshots directory:
 
 stapp01-before-grep.png
@@ -90,10 +93,10 @@ stapp01-root-denied.png
 
 📂 You can view these in the /screenshots folder.
 
-🏁 Outcome
+### 🏁 Outcome
 Successfully disabled direct root SSH login on all app servers in compliance with xFusionCorp security policies. This enhanced the security posture of the environment by enforcing named user access and reducing privilege escalation vectors.
 
-👨‍💻 Skills Demonstrated
+### 👨‍💻 Skills Demonstrated
 Linux system administration
 
 SSH and server hardening
@@ -106,7 +109,7 @@ Verifying real-world security controls
 
 Professional documentation and screenshot capture
 
-📣 Final Note
+### 📣 Final Note
 This task was completed as part of the 100 Days of Kloud challenge on KodeKloud's DevOps learning platform, focused on mastering hands-on DevOps and SRE skills through real-world projects.
 
 
