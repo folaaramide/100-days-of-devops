@@ -30,7 +30,6 @@ kubectl get pods
 ### (Optional) Describe deployment details
 kubectl describe deployment nginx
 
-📸 Screenshots
 ![Description	Screenshot](screenshots\deployment-description.png)
 ![Deployment created and verified with pods running](screenshots\created-deployments-pods-running.png)			
 
