@@ -30,8 +30,8 @@ kubectl get pods
 ### (Optional) Describe deployment details
 kubectl describe deployment nginx
 
-![Description	Screenshot](screenshots\deployment-description.png)
-![Deployment created and verified with pods running](screenshots\created-deployments-pods-running.png)			
+![Description	Screenshot](./screenshots/deployment-description.png)![Nginx Deployment]
+![Deployment created and verified with pods running](./screenshots/created-deployments-pods-running.png)			
 
 ## 📈 Business Context & Relevance
 In modern microservices architectures, Kubernetes is used to deploy, scale, and manage applications efficiently.
