@@ -64,13 +64,12 @@ Connection closed by 172.16.238.10 port 22
 ![Root login blocked](./screenshots/all-servers-root-denied.png)
 
 ### Verification Completed On:
-Host	PermitRootLogin	SSH Restarted	Root Login Blocked
 
-stapp01	✅	✅	✅
-
-stapp02	✅	✅	✅
-
-stapp03	✅	✅	✅
+| Hostname   | PermitRootLogin  | SSH Restarted| Root Login Blocked
+|------------|------------------|--------------|--------------
+| stapp01    | ✅               | ✅          | ✅
+| stapp02    | ✅               | ✅          | ✅
+| stapp03    | ✅               | ✅          | ✅
 
 ### Evidence
 All key steps were documented with screenshots and saved in the /screenshots directory:
