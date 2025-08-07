@@ -40,14 +40,23 @@ To demonstrate **IaC best practices**, I chose to define the Pod in a `YAML` fil
 ## Steps Performed
 
 ### 1. Created a YAML Manifest (dev-nginx-pod.yaml)
+
 apiVersion: v1
+
 kind: Pod
+
 metadata:
+
   name: dev-nginx-pod
+  
   namespace: dev
+  
 spec:
+  
   containers:
+  
     - name: nginx
+    
       image: nginx:latest
 
 ### 2. Created the Namespace
