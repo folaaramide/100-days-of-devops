@@ -74,7 +74,6 @@ Successfully created the dev namespace and deployed the dev-nginx-pod using a YA
 
 -Verification and debugging with kubectl describe
 
-## Related
-This project is part of the 100 Days of DevOps challenge from KodeKloud, helping engineers build hands-on experience with production-ready tools and techniques.
-If you found this helpful or want to collaborate, feel free to reach out on LinkedIn.
+**This project is part of the 100 Days of DevOps challenge from KodeKloud, helping engineers build hands-on experience with production-ready tools and techniques.
+If you found this helpful or want to collaborate, feel free to reach out on LinkedIn.**
 
