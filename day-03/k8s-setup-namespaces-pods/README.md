@@ -40,24 +40,7 @@ To demonstrate **IaC best practices**, I chose to define the Pod in a `YAML` fil
 ## Steps Performed
 
 ### 1. Created a YAML Manifest (dev-nginx-pod.yaml)
-
-apiVersion: v1
-
-kind: Pod
-
-metadata:
-
-  name: dev-nginx-pod
-  
-  namespace: dev
-  
-spec:
-  
-  containers:
-  
-    - name: nginx
-    
-      image: nginx:latest
+![YAML manifest created](screenshots/yaml-manifest.png)
 
 ### 2. Created the Namespace
 kubectl create namespace dev
@@ -68,7 +51,7 @@ kubectl apply -f dev-nginx-pod.yaml
 ### 4. Verified the Pod Status
 kubectl get pods -n dev
 
-![Namepace created and yaml applied with pod created](screenshots/yaml-namespace-pod-creation.png)
+![Namepace created and yaml applied with pod created](screenshots/namespace-pod-creation.png)
 
 ### 5. Described the Pod (Optional, for deeper inspection)
 kubectl describe pod dev-nginx-pod -n dev
