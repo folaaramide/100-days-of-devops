@@ -1,0 +1,13 @@
+### 1. Created a YAML Manifest (dev-nginx-pod.yaml)
+yaml
+Copy
+Edit
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dev-nginx-pod
+  namespace: dev
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
