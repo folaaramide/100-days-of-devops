@@ -1,8 +1,8 @@
-# Kubernetes Pod Deployment using YAML – Day 2 of 100 Days of DevOps
+# Kubernetes Pod Deployment using YAML – Day 3 of 100 Days of DevOps
 
 ## Project: Namespace & Pod Creation for Nautilus Microservices
 
-This task was completed as part of **Day 2** in the **100 Days of DevOps** challenge on KodeKloud, focusing on deploying containerized applications using Kubernetes in a structured and scalable way.
+This task was completed as part of **Day 3** in the **100 Days of DevOps** challenge on KodeKloud, focusing on deploying containerized applications using Kubernetes in a structured and scalable way.
 
 The **Nautilus DevOps Team** is preparing to migrate its microservices architecture to Kubernetes. As a foundational step, I was tasked with creating a Kubernetes **namespace** and deploying a basic **nginx pod** inside it, adhering to the organization’s DevOps standards and aligning with best practices for future automation.
 
