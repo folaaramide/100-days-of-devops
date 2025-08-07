@@ -48,10 +48,10 @@ kubectl create namespace dev
 ### 3. Applied the YAML File
 kubectl apply -f dev-nginx-pod.yaml
 
+![Namepace created and yaml applied with pod created](screenshots/namespace-pod-creation.png)
+
 ### 4. Verified the Pod Status
 kubectl get pods -n dev
-
-![Namepace created and yaml applied with pod created](screenshots/namespace-pod-creation.png)
 
 ### 5. Described the Pod (Optional, for deeper inspection)
 kubectl describe pod dev-nginx-pod -n dev
