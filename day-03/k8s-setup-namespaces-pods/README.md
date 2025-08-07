@@ -64,7 +64,7 @@ kubectl get pods -n dev
 ### 5. Described the Pod (Optional, for deeper inspection)
 kubectl describe pod dev-nginx-pod -n dev
 
-![Pod status and description](screenshots/status-describe.png)
+![Pod status and description](screenshots/pod-status-describe.png)
 
 ## Outcome
 Successfully created the dev namespace and deployed the dev-nginx-pod using a YAML manifest in the Kubernetes cluster. Verified that the pod is in a Running state and using the correct container image (nginx:latest).
