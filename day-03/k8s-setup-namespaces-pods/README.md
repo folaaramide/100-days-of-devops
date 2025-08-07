@@ -37,7 +37,7 @@ Kubernetes resources can be created using `kubectl` CLI commands (imperative) or
 
 To demonstrate **IaC best practices**, I chose to define the Pod in a `YAML` file, even though a one-liner CLI command would have worked.
 
-## 🛠️ Steps Performed
+## Steps Performed
 
 ### 1. Created a YAML Manifest (dev-nginx-pod.yaml)
 yaml
