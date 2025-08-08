@@ -24,7 +24,7 @@ Provision an AWS VPC named `datacenter-vpc` in `us-east-1` with an IPv4 CIDR blo
 - **VS Code** – Code editing and terminal integration
 - **GitHub** – Version control and project showcase
 
-## 🔍 Implementation Walkthrough
+## Implementation Walkthrough
 
 ### 1. **Terraform Provider Configuration**
 I started by defining the AWS provider in `main.tf` to set the target region:
