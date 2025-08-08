@@ -15,7 +15,7 @@ In large-scale infrastructure environments like xFusionCorp’s:
 
 This task simulates a real-world scenario where correct Linux permissions are vital to system reliability.
 
-## 🔧 Objective
+## Objective
 
 Grant executable permissions to the `/tmp/xfusioncorp.sh` script **on App Server 2**, such that **all users** can execute it.
 
@@ -34,7 +34,7 @@ Initial output:
 The file had no permissions for any user - not even the owner (root) could read or execute it.
 ![Initial Permission](screenshots/initial-permission-state.png)
 
-### 3 - Debugging & Learning Moment
+### 3. Debugging & Learning Moment
 Out of habit from using the KodeKloud labs (where files often have baseline permissions), I ran:
 
 sudo chmod a+x /tmp/xfusioncorp.sh
@@ -69,7 +69,7 @@ r-x for group
 
 r-x for others
 
-### Mission accomplished.
+**Mission accomplished.**
 
 ![Final permission](screenshots/final-permission-state.png)
 
