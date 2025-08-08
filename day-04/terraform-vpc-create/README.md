@@ -5,7 +5,7 @@
 The Nautilus DevOps team is in the early stages of migrating part of their on-premise infrastructure to the AWS cloud.  
 Given the scale and criticality of operations, a **phased migration strategy** was chosen over a “big bang” cutover.  
 
-This approach allows:
+This approach allows:A
 - Lower operational risk during transition
 - Fine-grained control over resources
 - Incremental testing and optimization at each stage
