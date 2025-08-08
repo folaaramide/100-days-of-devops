@@ -5,7 +5,7 @@ As part of the **Nautilus Project** at xFusionCorp Industries, the DevOps team i
 
 On **App Server 2**, however, the script lacked the necessary executable permissions. My task was to ensure this script is made executable by **all users**, which is critical to allow automated systems and users to run the backup process without encountering permission errors.
 
-## 💼 Business Need
+## Business Need
 
 In large-scale infrastructure environments like xFusionCorp’s:
 
@@ -73,18 +73,7 @@ r-x for others
 
 ![Final permission](screenshots/final-permission-state.png)
 
-📸 Screenshots
-Description	Screenshot
-Initial permissions (none)	
-Incorrect attempt (a+x)	
-Final fix (chmod 755)	
-
-Note: Replace these with actual screenshot paths in your repo.
-
 ### Reflection
 This was a deceptively simple task that highlighted the importance of understanding file permission fundamentals in Linux. It reinforced a key DevOps mindset: assume nothing, verify everything.
 
 I’m embracing every misstep as an opportunity to deepen my foundational knowledge, and that’s exactly the kind of iterative thinking DevOps thrives on.
-
-### Tags
-#100DaysOfCloud #LinuxPermissions #DevOps #KodeKloud #Automation #NautilusProject #Troubleshooting #Scripting #BackupAutomation
