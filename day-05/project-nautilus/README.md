@@ -7,9 +7,9 @@ For this stage, the focus was on App Server 3, with the objectives to:
 
 -Install the necessary SELinux policy packages.
 
-=Permanently disable SELinux until proper policy tuning could be completed.
+-Permanently disable SELinux until proper policy tuning could be completed.
 
-=Ensure no immediate disruption, i.e. changes should only take effect after a scheduled reboot.
+-Ensure no immediate disruption, i.e. changes should only take effect after a scheduled reboot.
 
 ## Business Context
 In high-availability enterprise environments, introducing strong security controls like SELinux without preparation can cause unexpected service disruptions. The chosen approach allows:
