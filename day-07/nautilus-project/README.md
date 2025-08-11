@@ -13,12 +13,16 @@ The business essence here is simple: uninterrupted, secure automation without st
 
 ## Deliverables & Outcome
 
+
 -Configured SSH key-based authentication from `thor` on the jump host to all app servers.
+
 -Ensured correct permissions and ownership to meet OpenSSH security requirements.-
+
 -Verified logins work without a password prompt.
+
 -Documented each step with its operational relevance.
 
-## Example server mapping:**
+## Server mapping:**
 
 * `stapp01.com` → `tony`
 * `stapp02.com` → `steve`
@@ -38,6 +42,8 @@ ssh-keygen -t rsa -b 4096 -C "thor@jump" -f ~/.ssh/id_rsa -N ""
 
 **Why:** Creates a cryptographic identity for `thor` without needing a password for each login.
 
+![Screenshot](screenshots/keygen.png)
+
 ### 3. Install Public Keys on Target Servers *(Run on: Jump host)*
 
 ssh-copy-id -i ~/.ssh/id_rsa.pub tony@app-server-01.example.com
@@ -48,11 +54,15 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub banner@app-server-03.example.com
 
 **Why:** Authorizes `thor`’s key on each target sudo user’s account so future logins bypass password prompts.
 
+![Screenshot](screenshots/ssh-copy-id-success.png)
+
 ### 4. Verify Logins *(Run on: Jump host)*
 
 ssh -o BatchMode=yes tony@app-server-01.example.com whoami
 
 **Why:** Ensures automation can run non-interactively.
+
+![Screenshot](screenshots/verify-login.png)
 
 ## Server-side Checks *(Run on: App server)*
 
@@ -74,6 +84,8 @@ chmod 600 /home/tony/.ssh/authorized_keys
 
 chown tony:tony /home/tony/.ssh/authorized_keys
 
+![Screenshot](screenshots/authorized_keys-check.png)
+
 ### c) Home directory permissions
 
 ls -ld /home/tony
@@ -89,16 +101,10 @@ sudo nano /etc/ssh/sshd_config
 PubkeyAuthentication yes
 
 sudo systemctl restart sshd
+![Screenshot](screenshots/ssh-config.png)
+
+![Screenshot](screenshots/final_summary.png)
 
 Repeated for `steve` and `banner` on their respective servers.
 
-## Evidence & Screenshots
-
-1. `07-keygen.png` — Generated SSH key.
-2. `07-ssh-copyid-success.png` — Key installed on target.
-3. `07-authorized_keys-check.png` — Permissions fixed.
-4. `07-verify-login.png` — Passwordless SSH success.
-5. `07-sshd-config.png` — Server configured for key auth.
-6. `07-final-summary.png` — All servers verified.
-
-**Recruiter Summary:** Successfully implemented secure, password-less SSH for `thor` to access all application servers through mapped sudo users. This work enables secure, automated operations for the Nautilus Project, demonstrating skills in Linux system administration, SSH hardening, and automation enablement.
+**Summary:** Successfully implemented secure, password-less SSH for `thor` to access all application servers through mapped sudo users. This work enables secure, automated operations for the Nautilus Project, demonstrating skills in Linux system administration, SSH hardening, and automation enablement.
