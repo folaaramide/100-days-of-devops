@@ -24,13 +24,13 @@ Logged into the first Nautilus app server via SSH and confirmed the operating sy
 ssh tony@stapp01
 cat /etc/os-release
 
-![Screenshot](screenshot/os-check-app01.png)
+![Screenshot](screenshots/os-check-app01.png)
 
 ### Step 2: Installing Cronie
 On CentOS, cron is provided by the cronie package.
 
 sudo yum install -y cronie
-![Screenshot](screenshot/install-cronie-app01.png)
+![Screenshot](screenshots/install-cronie-app01.png)
 
 ### Step 3: Enabling and Starting crond
 Enabled the cron daemon to start immediately and on every boot.
@@ -38,7 +38,7 @@ Enabled the cron daemon to start immediately and on every boot.
 sudo systemctl enable --now crond
 
 sudo systemctl status crond
-![Screenshot](screenshotcrond-status-app01.png)
+![Screenshot](screenshots/crond-status-app01.png)
 
 ### Step 4: Adding the Test Cron Job via vi
 Opened the root crontab in vi:
@@ -50,7 +50,7 @@ Inside vi, I inserted the following line at the bottom:
 
 Then I saved and exited (:wq in vi).
 
-![Screenshot](screenshot/root-crontab-after-app1.png)
+![Screenshot](screenshots/root-crontab-after-app1.png)
 
 ### Step 5 - Verifying the Job
 Waited for at least 5 minutes for the schedule to trigger, then confirmed the file content:
@@ -62,7 +62,7 @@ Output:
 nginx
 
 hello
-![Screenshot](screenshot/cron-output-file-app01.png)
+![Screenshot](screenshots/cron-output-file-app01.png)
 
 ##  Outcome
 1. Cron service installed and running on all Nautilus app servers.
