@@ -25,7 +25,7 @@ ssh tony@stapp01
 cat /etc/os-release
 
 📷 Screenshot: screenshot/ssh-login-app01.png
-📷 Screenshot: os_check_app01.png
+📷 Screenshot: os-check-app01.png
 
 ### Step 2: Installing Cronie
 On CentOS, cron is provided by the cronie package.
@@ -64,7 +64,7 @@ Output:
 nginx
 
 hello
-📷 Screenshot: 06_cron_output_file_app1.png
+📷 Screenshot: cron-output-file-app01.png
 
 ##  Outcome
 1. Cron service installed and running on all Nautilus app servers.
