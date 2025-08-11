@@ -58,7 +58,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub banner@stapp03
 
 ### 4. Verify Logins *(Run on: Jump host)*
 
-ssh -o BatchMode=yes tony@app-server-01.example.com whoami
+ssh -o BatchMode=yes tony@stapp01 whoami
 
 **Why:** Ensures automation can run non-interactively.
 
