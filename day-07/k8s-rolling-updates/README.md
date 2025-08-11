@@ -49,13 +49,17 @@ kubectl rollout status deployment/nginx-deployment
 
 ### Step 6: Verify Pods Running the New Image
 Finally, I verified that all pods were running the updated image and were in the Running state using a JSONPath query:
+![Screenshot](screenshots/success-verification.png)
+
 
 kubectl get pods -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.phase}{"\t"}{range .spec.containers[*]}{.image}{" "}{end}{"\n"}{end}'
 
 The output confirmed:
 
 nginx-deployment-xxxxx        Running nginx:1.17
+
 nginx-deployment-yyyyy        Running nginx:1.17
+
 nginx-deployment-zzzzz        Running nginx:1.17
 
 ## Reflection
