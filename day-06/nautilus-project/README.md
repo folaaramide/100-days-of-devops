@@ -50,8 +50,6 @@ Inside vi, I inserted the following line at the bottom:
 
 Then I saved and exited (:wq in vi).
 
-![Screenshot](screenshots/root-crontab-after-app1.png)
-
 ### Step 5 - Verifying the Job
 Waited for at least 5 minutes for the schedule to trigger, then confirmed the file content:
 
@@ -62,7 +60,7 @@ Output:
 nginx
 
 hello
-![Screenshot](screenshots/cron-output-file-app01.png)
+![Screenshot](screenshots/root-crontab-after-app1.png)
 
 ##  Outcome
 1. Cron service installed and running on all Nautilus app servers.
