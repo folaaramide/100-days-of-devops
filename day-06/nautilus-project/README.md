@@ -37,6 +37,7 @@ sudo yum install -y cronie
 Enabled the cron daemon to start immediately and on every boot.
 
 sudo systemctl enable --now crond
+
 sudo systemctl status crond
 📷 Screenshot: screenshot/crond-tatus-app01.png
 
@@ -47,6 +48,7 @@ sudo crontab -u root -e
 Inside vi, I inserted the following line at the bottom:
 
 */5 * * * * /bin/echo hello > /tmp/cron_text
+
 Then I saved and exited (:wq in vi).
 
 📷 Screenshot: screenshot/root-crontab-edit-vi.png
@@ -65,18 +67,18 @@ hello
 📷 Screenshot: 06_cron_output_file_app1.png
 
 ##  Outcome
-•	Cron service installed and running on all Nautilus app servers.
-•	Root-level cron job successfully scheduled via manual vi edit.
-•	Test confirmed that the job executes every 5 minutes and outputs "hello" into /tmp/cron_text.
+1. Cron service installed and running on all Nautilus app servers.
+2. Root-level cron job successfully scheduled via manual vi edit.
+3. Test confirmed that the job executes every 5 minutes and outputs "hello" into /tmp/cron_text.
 
 ## Skills Demonstrated
-•	Linux service management with systemctl
-•	CentOS package installation with yum
-•	Editing and managing crontabs with vi
-•	Task scheduling with cron
-•	Verifying job execution via command-line
+1. Linux service management with systemctl
+2. CentOS package installation with yum
+3. Editing and managing crontabs with vi
+4. Task scheduling with cron
+5. Verifying job execution via command-line
 
 ## Reflection
 Today’s exercise reinforced the importance of testing before deploying in operations.
 
-Even something as simple as writing "hello" to a file serves as a powerful proof that the scheduling system works as intended — a critical first step before entrusting it with production workloads.
+Even something as simple as writing "hello" to a file serves as a powerful proof that the scheduling system works as intended, a critical first step before entrusting it with production workloads.
