@@ -54,7 +54,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub banner@stapp03
 
 **Why:** Authorizes `thor`’s key on each target sudo user’s account so future logins bypass password prompts.
 
-![Screenshot](screenshots/ssh-copy-id-success.png)
+![Screenshot](screenshots/ssh-copyid-success.png)
 
 ### 4. Verify Logins *(Run on: Jump host)*
 
