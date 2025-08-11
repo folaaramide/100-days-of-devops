@@ -46,11 +46,11 @@ ssh-keygen -t rsa -b 4096 -C "thor@jump" -f ~/.ssh/id_rsa -N ""
 
 ### 3. Install Public Keys on Target Servers *(Run on: Jump host)*
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub tony@app-server-01.example.com
+ssh-copy-id -i ~/.ssh/id_rsa.pub tony@stapp01
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub steve@app-server-02.example.com
+ssh-copy-id -i ~/.ssh/id_rsa.pub steve@stapp02
 
-ssh-copy-id -i ~/.ssh/id_rsa.pub banner@app-server-03.example.com
+ssh-copy-id -i ~/.ssh/id_rsa.pub banner@stapp03
 
 **Why:** Authorizes `thor`’s key on each target sudo user’s account so future logins bypass password prompts.
 
@@ -101,9 +101,9 @@ sudo nano /etc/ssh/sshd_config
 PubkeyAuthentication yes
 
 sudo systemctl restart sshd
-![Screenshot](screenshots/ssh-config.png)
+![Screenshot](screenshots/sshd-config.png)
 
-![Screenshot](screenshots/final_summary.png)
+![Screenshot](screenshots/final-summary.png)
 
 Repeated for `steve` and `banner` on their respective servers.
 
