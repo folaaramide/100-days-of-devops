@@ -60,7 +60,7 @@ Output:
 nginx
 
 hello
-![Screenshot](screenshots/root-crontab-after-app1.png)
+![Screenshot](screenshots/root-crontab-after-app01.png)
 
 ##  Outcome
 1. Cron service installed and running on all Nautilus app servers.
