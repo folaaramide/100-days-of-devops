@@ -120,7 +120,7 @@ Enable on boot:
 
 sudo systemctl enable mariadb
 
-![Screenshot](screenshots/mariadb-status-running.png)
+![Screenshot](screenshots/fix-mariadb-permissions.png)
 
 8. Verify
 
