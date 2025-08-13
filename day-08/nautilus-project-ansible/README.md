@@ -29,7 +29,7 @@ Used sudo to ensure Ansible is installed system-wide.
 ansible --version
 
 Confirmed version 4.9.0 installed successfully.
-![Screenshot](screenshots/ansible-version-python.png)
+![Screenshot](screenshots/ansible-version.png)
 4. Verified Global Installation Path
 
 To ensure that Ansible was installed in a system-wide location accessible to all users, I checked the binary directly from its installation path:
