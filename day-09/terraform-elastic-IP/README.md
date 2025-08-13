@@ -37,13 +37,13 @@ Added the AWS provider and Elastic IP resource definition.
 terraform init
 
 Downloads AWS provider plugin.
-![Screenshot](screenshots.terraform-init.png)
+![Screenshot](screenshots/terraform-init.png)
 4. Preview Infrastructure Changes
 
 terraform plan
 
 Verified that Terraform would create 1 Elastic IP.
-![Screenshot](screenshots.terraform-plan.png)
+![Screenshot](screenshots/terraform-plan.png)
 5. Apply the Configuration
 
 terraform apply
