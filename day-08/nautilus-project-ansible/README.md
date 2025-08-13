@@ -13,9 +13,9 @@ For initial testing, we set up the Jump Host as the Ansible Controller to run pl
 1. Verified Python3 & pip3
 
 python3 --version
-
+![Screenshot](screenshots/verified-python.png)
 pip3 --version
-
+![Screenshot](screenshots/verified-pip.png)
 Confirmed both were installed.
 
 2. Installed Ansible 4.9.0
@@ -29,7 +29,7 @@ Used sudo to ensure Ansible is installed system-wide.
 ansible --version
 
 Confirmed version 4.9.0 installed successfully.
-
+![Screenshot](screenshots/ansible-version-python.png)
 4. Verified Global Installation Path
 
 To ensure that Ansible was installed in a system-wide location accessible to all users, I checked the binary directly from its installation path:
@@ -40,9 +40,7 @@ The output confirmed that Ansible 4.9.0 was installed and ready for use.
 
 Since /usr/local/bin is part of the default $PATH for all users on most Linux systems, this ensures global availability without additional configuration.
 
-📸 Screenshot: Terminal showing /usr/local/bin/ansible --version output.
-📄 Filename: day7-step4-global-test.png
-
+![Screenshot](screenshots/global-test.png)
 
 ## Skills Demonstrated
 Configuration Management Fundamentals - Installing and preparing Ansible.
