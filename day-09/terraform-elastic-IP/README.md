@@ -19,7 +19,9 @@ Reduce manual AWS console work.
 Keep infrastructure changes auditable.
 
 ## Terraform Configuration
-![Screenshot](screenshots.main.tf.png)
+main.tf
+
+
 
 ## Steps Performed
 1. Navigate to Terraform Project Directory
