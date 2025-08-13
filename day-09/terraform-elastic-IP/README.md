@@ -1,4 +1,4 @@
-# Day 9 — Allocating an AWS Elastic IP with Terraform (100 Days of Cloud/DevOps)
+# Day 9 - Allocating an AWS Elastic IP with Terraform (100 Days of Cloud/DevOps)
 
 As part of my 100 Days of DevOps Challenge, I am building real-world, production-ready skills by automating infrastructure with Terraform on AWS.
 
