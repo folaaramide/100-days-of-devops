@@ -44,6 +44,7 @@ Initial output:
 ● mariadb.service - MariaDB 10.5 database server
 
    Loaded: loaded (/usr/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
+   
    Active: failed (Result: exit-code)
 
 Meaning: The service failed to start, but no detailed cause was shown.
@@ -55,10 +56,11 @@ sudo systemctl start mariadb
 Response:
 
 Job for mariadb.service failed because the control process exited with error code.
+
 See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for details.
 
 Meaning: The service failed immediately; I needed deeper logs.
-![Screenshot](screenshots/mariadb-start-fail.png
+![Screenshot](screenshots/mariadb-start-fail.png)
 
 5. Review Recent Service Logs
 
@@ -72,10 +74,9 @@ mariadb.service: Main process exited, status=1/FAILURE
 
 Failed to start MariaDB 10.5 database server.
 
-Meaning: MariaDB exited abnormally, but the cause wasn’t yet clear — next step: check MariaDB’s own error log.
+Meaning: MariaDB exited abnormally, but the cause wasn’t yet clear - next step: check MariaDB’s own error log.
 
-![Screenshot](screenshots/mariadb-journalctl-error.png
-________________________________________
+![Screenshot](screenshots/mariadb-journalctl-error.png)
 
 6. Inspect MariaDB Error Log
 
@@ -84,9 +85,13 @@ sudo tail -n 30 /var/log/mariadb/mariadb.log
 Critical findings:
 
 [ERROR] InnoDB: Operating system error number 13 in a file operation.
+
 [ERROR] The error means mysqld does not have the access rights to the directory.
+
 [ERROR] Cannot open datafile './ibtmp1'
+
 [ERROR] Unable to create the shared innodb_temporary
+
 [ERROR] Plugin initialization aborted with error Cannot open a file
 
 Meaning: OS error 13 = Permission denied - the mysql user lacked access to /var/lib/mysql, MariaDB’s data directory.
@@ -114,7 +119,8 @@ sudo systemctl start mariadb
 Enable on boot:
 
 sudo systemctl enable mariadb
-/screenshots/mariadb-status-running.png
+
+![Screenshot](screenshots/mariadb-status-running.png)
 
 8. Verify
 
@@ -123,7 +129,7 @@ sudo systemctl status mariadb
 Output showed:
 
 Active: active (running)
-![Screenshot](screenshots/mariadb-running-success.png
+![Screenshot](screenshots/mariadb-running-success.png)
 
 ## Outcome
 •	Identified root cause: incorrect file permissions blocking InnoDB initialization.
