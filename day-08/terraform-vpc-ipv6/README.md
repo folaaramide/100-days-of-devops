@@ -28,7 +28,7 @@ Creating an IPv6-enabled VPC in the us-east-1 region is the first step, ensuring
 ![Screenshot](screenshots/main.tf.png)
 
 ## Workflow Steps
-1.	Create main.tf with the IPv6-enabled VPC configuration.
+1.	Created main.tf with the IPv6-enabled VPC configuration.
 
 2.	Format Terraform code for consistency:
 
