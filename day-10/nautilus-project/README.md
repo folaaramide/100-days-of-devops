@@ -65,34 +65,34 @@ The zip utility wasn’t installed on the CentOS-based KodeKloud environment.
 ## Execution Workflow
 
 -[banner@stapp03]$ /scripts/news_backup.sh
-![Screenshot](assets/screenshot.png)
+![Screenshot](screenshots/source-files.png)
 
 
 -updating: var/www/html/news/ (stored 0%)
 
 -updating: var/www/html/news/index.html (stored 0%)
 
--xfusioncorp_news.zip                                    100%  588     1.6MB/s   00:00
+-xfusioncorp_news.zip
+![Screenshot](screenshots/back-up-local.png)
 
 -Backup successful on stbkp01
+![Screenshot](screenshots/back-up-remote.png)
 
 -[banner@stapp03]$ ssh clint@stbkp01 "ls -lh /backup/xfusioncorp_news.zip"
 
 -rw-r--r-- 1 clint clint 588 Aug 13 23:13 /backup/xfusioncorp_news.zip
+![Screenshot](screenshots/back-up-confirmation.png)
 
-Screenshots
-1.	news_source_files.png – Source website files
-2.	backup_dir.png – Backup directory confirmation
-3.	script_execution.png – Running the backup script
-4.	backup_local.png – Local backup archive
-5.	backup_remote.png – Remote backup confirmation
-________________________________________
-Tools & Technologies
+## Tools & Technologies
 •	Bash scripting
+
 •	Linux file system operations
+
 •	zip utility for compression
+
 •	SSH & SCP for secure remote copy
+
 •	Passwordless SSH authentication (RSA keys)
-________________________________________
-Summary
+
+## Summary
 This project demonstrates automation, security, and reliability in an enterprise DevOps context. Troubleshooting issues like missing zip packages and SSH key setup provided hands-on exposure to real-world operational challenges. It adds tangible value to the 100 Days of DevOps journey by showcasing problem-solving, scripting, and backup automation.
