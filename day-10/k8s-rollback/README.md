@@ -25,15 +25,15 @@ kubectl rollout history deployment/nginx-deployment
 
 4.	Rollback to the previous revision
 kubectl rollout undo deployment/nginx-deployment
-![Screenshot](assets/screenshot.png)
+![Screenshot](screenshots/deployments-rollout.png)
 
 5.	Verify rollout status
 kubectl rollout status deployment/nginx-deployment
-![Screenshot](assets/screenshot.png)
+![Screenshot](screenshots/describe-1.png)
 
 6.	Confirm rollback details
 kubectl describe deployment nginx-deployment
-![Screenshot](assets/screenshot.png)
+![Screenshot](screenshots/describe-02.png)
 
 ## Outcome
 •	Restored the application to a stable state without downtime.
