@@ -6,7 +6,7 @@ The Nautilus DevOps team is migrating part of their on-premises infrastructure t
 
 ## Step-by-Step Workflow
 1. Created a single main.tf for all resources.
-![Screenshot](screenshots/main.tf.png)
+![Screenshot](screenshots/main.tf-error.png)
 
 2. Generated devops-kp using ssh-keygen if it didn’t exist.
 ![Screenshot](screenshots/ssh-keygen.png)
