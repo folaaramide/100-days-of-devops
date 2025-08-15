@@ -68,9 +68,10 @@ The zip utility wasn’t installed on the CentOS-based KodeKloud environment.
 ![Screenshot](screenshots/source-files.png)
 
 
--updating: var/www/html/news/ (stored 0%)
+-updating: var/www/html/news/
 
--updating: var/www/html/news/index.html (stored 0%)
+-updating: var/www/html/news/index.html
+![Screenshot](screenshots/back-up-directory.png)
 
 -xfusioncorp_news.zip
 ![Screenshot](screenshots/back-up-local.png)
