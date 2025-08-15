@@ -25,11 +25,11 @@ kubectl rollout history deployment/nginx-deployment
 
 4.	Rollback to the previous revision
 kubectl rollout undo deployment/nginx-deployment
-![Screenshot](screenshots/deployments-rollout.png)
+![Screenshot](screenshots/kubectl-deployments-rollout.png)
 
 5.	Verify rollout status
 kubectl rollout status deployment/nginx-deployment
-![Screenshot](screenshots/kiubectl-describe-1.png)
+![Screenshot](screenshots/kubectl-describe-1.png)
 
 6.	Confirm rollback details
 kubectl describe deployment nginx-deployment
