@@ -7,7 +7,6 @@ For Day 11, I simulated a real-world Java application deployment scenario. The N
 
 ## Objective
 - Install Tomcat on App Server 1
-![Screenshot](screenshots/install-tomcat.png)
 
 - Configure Tomcat to run on a custom port (3001)
 
@@ -31,15 +30,17 @@ For Day 11, I simulated a real-world Java application deployment scenario. The N
 
 ssh tony@stapp01
 
-Install Tomcat
+Installed Tomcat
 
 sudo yum install -y tomcat tomcat-webapps tomcat-admin-webapps
+![Screenshot](screenshots/installed-tomcat.png)
 
 2. **Change Tomcat Port**
 
 sudo vi /etc/tomcat/server.xml
 
 Changed 8080 → 3001.
+![Screenshot](screenshots/port8080-3001.png)
 
 3. **Start and Enable Tomcat**
 
@@ -56,10 +57,12 @@ sudo mv /tmp/ROOT.war /var/lib/tomcat/webapps/
 5. **Restart Tomcat**
 
 sudo systemctl restart tomcat
+![Screenshot](screenshots/tomcat-restart.png)
 
-Test Application
+6. **Test Application**
 
 curl http://stapp01:3001
+![Screenshot](screenshots/test-application.png)
 
 ## Outcome
 Successfully deployed a Java WAR file to Tomcat.
