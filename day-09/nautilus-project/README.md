@@ -20,8 +20,11 @@ This task was to diagnose and restore MariaDB, ensuring the fix addressed not ju
 For Nautilus, the database is the source of truth for transactions, inventory, and user data.
 
 An outage here means:
+
 •	Lost sales & transactions
+
 •	Customer dissatisfaction
+
 •	Operational paralysis for dependent services
 
 In real enterprises, DB recovery is an urgent task that demands methodical troubleshooting under pressure.
@@ -133,6 +136,9 @@ Active: active (running)
 
 ## Outcome
 •	Identified root cause: incorrect file permissions blocking InnoDB initialization.
+
 •	Restored MariaDB service and verified connectivity.
+
 •	Ensured service auto-starts on reboot.
+
 •	Strengthened troubleshooting methodology under production-like conditions.
