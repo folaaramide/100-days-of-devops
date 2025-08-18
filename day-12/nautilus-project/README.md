@@ -114,9 +114,13 @@ curl http://stapp01:5001
 
 ## Skills Demonstrated
 •	Linux service & port troubleshooting
+
 •	Network connectivity diagnostics (telnet, curl, netstat)
+
 •	Process conflict resolution
+
 •	Secure firewall adjustments (iptables)
+
 •	Incident handling & structured validation
 
 ## Outcome
