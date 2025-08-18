@@ -57,8 +57,8 @@ curl http://stapp01:8087
 
 curl http://stapp02:8087
 
-![Screenshot](screenshots/lb-verify.png)
-•	Succeded
+![Screenshot](screenshots/ip-tabele-lb-verify.png)
+•	Succeeded
 
 Step 3: Tested from jump host or another app server (blocked)
 
