@@ -25,7 +25,7 @@ This mirrors **real-world DevOps work** in cloud migration projects.
 ## Project Steps  
 
 1. **Created ReplicaSet YAML**
-![Screenshot](screenshots/replicas-yaml.png)
+![Screenshot](screenshots/replicas.yaml.png)
    
 2. Applied configuration
 
