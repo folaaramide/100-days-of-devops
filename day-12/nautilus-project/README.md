@@ -56,7 +56,7 @@ sudo netstat -tulnp | grep 5001
 sudo systemctl stop sendmail
 
 sudo systemctl disable sendmail
-![Screenshot](screenshots/disabled.png)
+![Screenshot](screenshots/sendmail-disabled.png)
 ### Step 8: Restarted Apache
 sudo systemctl start httpd
 
@@ -92,12 +92,12 @@ Final Verification
 curl http://localhost:5001
 
 #### Apache test page HTML output
-![Screenshot](screenshots/local-curl.png)
+![Screenshot](screenshots/curl-remote.png)
 ### Step 14: Test remotely from jump host
 curl http://stapp01:5001
 
 #### Apache test page HTML output → Service fully restored
-![Screenshot](screenshots/remote-curl.png)
+![Screenshot](screenshots/local-curl.png)
 ## Challenges & Troubleshooting Highlights
 
 1.	Port Conflict: Apache wouldn’t start because sendmail was already bound to 5001.
