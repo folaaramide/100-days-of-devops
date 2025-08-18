@@ -23,7 +23,7 @@ From Jump Host
 telnet stapp01 5001
 
 #### Result: Connection failed → network or service issue confirmed
-![Screenshot](assets/screenshot.png)
+![Screenshot](screenshots/telnet-fail.png)
 
 ## Step 2: Attempted to reach via curl from jump host
 curl http://stapp01:5001
@@ -36,7 +36,7 @@ From App Server 1 (stapp01)
 sudo systemctl status httpd
 
 #### Result: Inactive
-
+![Screenshot](screenshots/httpd-failed.png)
 ### Step 4: Attempted start
 sudo systemctl start httpd
 
@@ -56,7 +56,7 @@ sudo netstat -tulnp | grep 5001
 sudo systemctl stop sendmail
 
 sudo systemctl disable sendmail
-
+![Screenshot](screenshots/disabled.png)
 ### Step 8: Restarted Apache
 sudo systemctl start httpd
 
@@ -65,7 +65,7 @@ sudo systemctl enable httpd
 sudo systemctl status httpd
 
 #### Apache now active
-
+![Screenshot](screenshots/httpd-running.png)
 ### Step 9: Test locally
 curl http://localhost:5001
 
@@ -92,12 +92,12 @@ Final Verification
 curl http://localhost:5001
 
 #### Apache test page HTML output
-
+![Screenshot](screenshots/local-curl.png)
 ### Step 14: Test remotely from jump host
 curl http://stapp01:5001
 
 #### Apache test page HTML output → Service fully restored
-
+![Screenshot](screenshots/remote-curl.png)
 ## Challenges & Troubleshooting Highlights
 
 1.	Port Conflict: Apache wouldn’t start because sendmail was already bound to 5001.
@@ -111,17 +111,6 @@ curl http://stapp01:5001
 -Added targeted rule for 5001, preserving other security restrictions.
 
 3.	Validation at Each Step: Used curl locally and remotely to ensure changes worked end-to-end before closing the incident.
-
-📸 Suggested Screenshots for GitHub & LinkedIn
-Step	Description	Filename
-1	Telnet fail from jump host	01_telnet_fail.png
-2	Apache fail to start (status output)	02_httpd_failed.png
-3	netstat showing sendmail on 5001	03_port_conflict.png
-4	Disabling sendmail	04_sendmail_disabled.png
-5	Apache running & listening on 5001	05_httpd_running.png
-6	iptables rule addition	06_firewall_rule_added.png
-7	Local curl success	07_curl_local.png
-8	Remote curl success from jump host	08_curl_remote.png
 
 ## Skills Demonstrated
 •	Linux service & port troubleshooting
