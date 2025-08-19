@@ -68,13 +68,6 @@ Apache responded successfully.
 2. Reinforced the importance of monitoring + root-cause analysis in production.
 3. Demonstrated how proactive troubleshooting ensures service reliability for customers.
 
-📸 Suggested Screenshots
-For GitHub README & LinkedIn post:
-1.	systemctl status httpd showing the initial failure (Address already in use). → error-status.png
-2.	netstat -tulnp | grep 3000 showing sendmail occupying port 3000. → port-conflict.png
-3.	netstat after stopping sendmail → port-freed.png
-4.	Successful curl http://stapp01:3000 output. → apache-fixed.png
-
 ## Wrap Up
 This project simulated a real DevOps on-call issue:
 
