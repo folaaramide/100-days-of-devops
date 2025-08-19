@@ -17,6 +17,7 @@ sudo systemctl status httpd
 
 Found that Apache failed with error:
 (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:3000
+![Screenshot](screenshots/failed-start.png)
 
 2.	**Investigated port usage**
 
@@ -27,6 +28,7 @@ tcp   0   0 127.0.0.1:3000   0.0.0.0:*   LISTEN   482/sendmail: accep
 
 Port 3000 was already occupied by sendmail (PID 482).
 
+![Screenshot](screenshots/port-conflict.png)
 3.	**Stopped the conflicting service**
 
 sudo systemctl stop sendmail
@@ -37,6 +39,7 @@ Re-checked: sudo netstat -tulnp | grep 3000
 
 Port was now free.
 
+![Screenshot](screenshots/port-freed.png)
 4.	**Restarted Apache**
 
 sudo systemctl start httpd
@@ -45,10 +48,13 @@ sudo systemctl enable httpd
 
 5.	**Validated service**
 
+![Screenshot](screenshots/httpd-active.png)
 On app server: curl http://localhost:3000
 
+![Screenshot](screenshots/fixed-curl-sucess-appserver.png)
 From jump host: curl http://stapp01:3000
 
+![Screenshot](screenshots/fixed-curl-success-jumphost.png)
 Apache responded successfully.
 
 ## Key Learning & Business Essence
