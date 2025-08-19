@@ -18,28 +18,28 @@ The xFusionCorp Industries SysAdmin team required a production server to be made
 -Command: sudo yum install nginx -y
 
 Essence: Web servers form the backbone of web applications. Getting Nginx running is the foundation.
-
+![Screenshot](screenshots/install-nginx.png)
 2.	Moved SSL certificates to secure location
 
 -Location: /etc/nginx/ssl/
 
 Essence: SSL certificates enforce encrypted communication, critical for business trust and compliance.
-
+![Screenshot](screenshots/ssl-secure-location.png)
 3.	Configured Nginx for HTTPS
 
 -Config file: /etc/nginx/conf.d/nautilus.conf
 
 Essence: Ensures the application will be accessible securely, aligning with modern security best practices.
-
+![Screenshot](screenshots/ssl-config.png)
 4.	Created index.html with “Welcome!”
 
 -Location: /usr/share/nginx/html/
 
 -Essence: Provides a visible validation of deployment success for users and stakeholders.
-
+![Screenshot](screenshots/index-html.png)
 5. Tested from Jump Host using curl
 
--Command: curl -Ik https://<app-server-3-ip>/
+-Command: curl -Ik https://172.16.238.12/
 
 -Essence: Final confirmation of end-to-end connectivity and secure readiness for deployment.
 
@@ -47,4 +47,6 @@ Essence: Ensures the application will be accessible securely, aligning with mode
 1. Learned how to deploy and secure web servers.
 2. Understood the importance of SSL for data security & compliance.
 3. Gained experience in end-to-end testing of server readiness.
-4. Recruiter takeaway: This demonstrates my ability to handle real-world server provisioning tasks that are essential in DevOps and cloud environments.
+
+## Recruiter takeaway 
+This demonstrates my ability to handle real-world server provisioning tasks that are essential in DevOps and cloud environments.
