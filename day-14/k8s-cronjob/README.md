@@ -18,21 +18,25 @@ In this project, I created a Kubernetes CronJob named datacenter to demonstrate 
 -	Command executed: echo Welcome to xfusioncorp!
 
 -	Restart policy: OnFailure
-
+![Screenshot](screenshots/create-cronjob-yaml.png)
 2.	Applied the manifest to the cluster using kubectl apply -f datacenter-cronjob.yaml.
 
+![Screenshot](screenshots/apply-cronjob.png)
 3.	Verified deployment with:
 
 -kubectl get cronjobs
 
 -kubectl describe cronjob datacenter
 
+![Screenshot](screenshots/cronjob-verified.png)
 4.	Observed job creation every 3 minutes using kubectl get jobs.
 
+![Screenshot](screenshots/cronjob-observed.png)
 5.	Checked logs of pods to confirm output:
 
 **Welcome to xfusioncorp!**
 
+![Screenshot](screenshots/logs-output.png)
 ## Key Learnings & Business Impact
 •	Automation at scale: CronJobs remove the need for manual intervention in recurring tasks.
 
