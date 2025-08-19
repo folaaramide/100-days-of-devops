@@ -51,7 +51,7 @@ sudo systemctl enable httpd
 ![Screenshot](screenshots/httpd-active.png)
 On app server: curl http://localhost:3000
 
-![Screenshot](screenshots/httpd-fixed-curl-sucess-appserver.png)
+![Screenshot](screenshots/httpd-fixed-curl-success-appserver.png)
 From jump host: curl http://stapp01:3000
 
 ![Screenshot](screenshots/httpd-fixed-curl-success-jumphost.png)
