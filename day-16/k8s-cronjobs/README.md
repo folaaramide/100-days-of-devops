@@ -13,41 +13,27 @@ In business environments, Kubernetes Jobs solve a critical need:
 
 ## Steps to Implement
 1. Define the Job YAML
-
+![Screenshot](screenshots/job-yaml.png)
 2. Apply the Job
 
 kubectl apply -f countdown-job.yaml
-
+![Screenshot](screenshots/kubectl-apply-job.png)
 3. Verify the Job
 
 kubectl get jobs
 
 kubectl describe job countdown-devops
-
+![Screenshot](screenshots/describe-jobs.png)
 4. Verify Pods
 
 kubectl get pods
 
-Sample output:
-
-NAME                     READY   STATUS      RESTARTS   AGE
-
-countdown-devops-4wlmn   0/1     Completed   0          86s
-
+![Screenshot](screenshots/get-pods.png)
 5. Check Logs
 
 kubectl logs countdown-devops-4wlmn
-
+![Screenshot](screenshots/logs.png)
 Since the command is just sleep 5, there is no output in the logs. This is expected and confirms the pod executed successfully.
-________________________________________
-📸 Key Screenshots
-•	jump_host-login.png → Proof of connecting to Kubernetes environment
-•	job-yaml.png → Job manifest definition
-•	kubectl-apply-job.png → Job creation success
-•	kubectl-get-jobs.png → Job running/completed
-•	kubectl-describe-job.png → Job details (command, container, completions)
-•	kubectl-get-pods.png → Pod created by the job (countdown-devops-4wlmn)
-•	kubectl-logs.png → Log output (empty, since job ran sleep 5)
 
 ## Takeaway & Learning Impact
 •	Learned how to create one-off workloads in Kubernetes.
