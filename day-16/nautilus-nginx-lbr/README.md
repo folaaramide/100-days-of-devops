@@ -27,33 +27,22 @@ This project mirrors what happens in real enterprise systems, where an effective
 -Confirmed Apache was listening on port 3004.
 
 -Verified services were active and serving the application content.
-📸 Screenshot suggestion:
-o	systemctl status httpd showing Apache running.
-o	ss -tulnp | grep 3004 to show Apache listening on 3004.
 
+systemctl status httpd showing Apache running.
+
+ss -tulnp | grep 3004 to show Apache listening on 3004.
+![Screenshot](screenshots/apache_status_app_server.png)
 2.	Installed and Configured Nginx on the LBR Server
 -Installed Nginx on the designated Load Balancer server (stlb01).
 
 -Edited /etc/nginx/nginx.conf to replace the default config with a clean reverse proxy setup pointing to all App Servers.
 
-Key snippet:
-upstream app_servers {
-    server stapp01:3004;
-    server stapp02:3004;
-    server stapp03:3004;
-}
-
-server {
-    listen 80;
-
-    location / {
-        proxy_pass http://app_servers;
-    }
-}
-📸 Screenshot suggestion:
-o	nginx -t showing syntax OK.
-o	systemctl status nginx showing the service active and running.
-
+**Key snippet:**
+![Screenshot](screenshots/nginx_config.png)📸 Screenshot suggestion:
+nginx -t showing syntax OK.
+![Screenshot](screenshots/nginx_config_test.png)
+systemctl status nginx showing the service active and running.
+![Screenshot](screenshots/nginx_status.png)
 3.	Validated Load Balancer Functionality
 -Ran curl http://localhost from the LBR server.
 
@@ -62,9 +51,8 @@ o	systemctl status nginx showing the service active and running.
 -Welcome to xFusionCorp Industries!
 
 -Verified that all responses came through the load balancer at port 80, proxying to the App Servers at port 3004.
-📸 Screenshot suggestion:
-o	Output of curl http://localhost showing the application served.
-o	Browser snapshot (via KodeKloud StaticApp button) showing the site loading through the LBR URL.
+![Screenshot](screenshots/curl_test_loadbalancer.png)
+![Screenshot](screenshots/browser_staticapp_test.png)
 
 ## Key Learnings
 •	Learned how to configure Nginx as a reverse proxy and load balancer in production-like settings.
