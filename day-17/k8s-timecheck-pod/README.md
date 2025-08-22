@@ -40,15 +40,6 @@ This project simulates such a scenario for the **Nautilus DevOps team**, where a
 
 100-days-of-devops/
 
-## 📸 Screenshots
-
-- `01-create-namespace.png` → Creating namespace  
-- `02-create-configmap.png` → ConfigMap creation  
-- `03-create-pod.png` → Pod creation  
-- `04-pod-status.png` → Pod running successfully  
-- `05-check-log-file.png` → Log file exists in volume  
-- `06-view-log-output.png` → Continuous time log entries  
-
 ## Key Learning
 
 - Hands-on with **ConfigMaps** for dynamic container configuration.  
