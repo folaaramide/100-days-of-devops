@@ -68,6 +68,6 @@ Today I implemented a real-world high availability setup by configuring an Nginx
 
 •	Apply Linux server management, Nginx configuration, and load balancing concepts in practice.
 
-•	Contribute to scalable and resilient system design — a must-have skill for modern cloud and DevOps engineers.
+•	Contribute to scalable and resilient system design, a must-have skill for modern cloud and DevOps engineers.
 
 **With this, the application is now highly available through a properly configured load balancer, ensuring performance and reliability as traffic grows.**
