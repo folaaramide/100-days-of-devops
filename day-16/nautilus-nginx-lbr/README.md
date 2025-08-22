@@ -70,13 +70,4 @@ Today I implemented a real-world high availability setup by configuring an Nginx
 
 •	Contribute to scalable and resilient system design — a must-have skill for modern cloud and DevOps engineers.
 
-📸 Suggested Screenshot Labels
-For clarity in GitHub and LinkedIn:
-1.	apache_status_app_server.png – Apache service running on App Server.
-2.	apache_port_check.png – Apache listening on port 3004.
-3.	nginx_config_test.png – Nginx config syntax OK.
-4.	nginx_status.png – Nginx active and running.
-5.	curl_test_loadbalancer.png – Application content served from LBR.
-6.	browser_staticapp_test.png – Application accessible via LBR URL in browser.
-
 **With this, the application is now highly available through a properly configured load balancer, ensuring performance and reliability as traffic grows.**
