@@ -37,7 +37,7 @@ GRANT ALL PRIVILEGES ON DATABASE kodekloud_db1 TO kodekloud_joy;
 6. Verified by Logging in as New User
 Exited the current psql shell:
 \q
-
+![Screenshot](screenshots/psql-shell.png)
 Then connected with the new user:
 
 psql -U kodekloud_joy -d kodekloud_db1 -h localhost
@@ -45,19 +45,10 @@ psql -U kodekloud_joy -d kodekloud_db1 -h localhost
 Checked connection details:
 
 \conninfo
-
-Expected output:
+![Screenshot](screenshots/host-connection-details.png)
+**Output:**
 You are connected to database "kodekloud_db1" as user "kodekloud_joy" on host "localhost" (address "127.0.0.1") at port "5432".
 
-📸 Key Screenshots
-•	ssh-to-dbserver.png → Proof of connecting to Nautilus DB server (stdb01)
-•	psql-shell.png → PostgreSQL shell open with postgres=#
-•	create-user.png → Database user created
-•	create-database.png → Database created
-•	grant-privileges.png → Permissions granted
-•	verify-login.png → Successful login as kodekloud_joy
-•	conninfo.png → Verified DB/user/host connection details
-________________________________________
 ## Takeaway & Learning Impact
 1. Learned to provision PostgreSQL users & databases securely.
 2. Understood the role of privilege management in DevOps workflows.
