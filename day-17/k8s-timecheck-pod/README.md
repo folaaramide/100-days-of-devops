@@ -15,14 +15,14 @@ This project simulates such a scenario for the **Nautilus DevOps team**, where a
 2. Dynamic configuration through **ConfigMaps**, allowing parameter changes without rebuilding containers.  
 3. Reusable design for testing pods before rolling into production clusters.  
 
-## 🛠What I Did
+## What I Did
 
 1. **Created a Kubernetes Namespace** (`datacenter`)  
    - Provides logical isolation for resources.  
-
+![Screenshot](screenshots/create-namespace.png)
 2. **Built a ConfigMap** (`time-config`)  
    - Stored key `TIME_FREQ=2` to dynamically control how often timestamps are logged.  
-
+![Screenshot](screenshots/create-configmap.png)
 3. **Deployed a Pod (`time-check`)**  
 
    - Container runs `busybox:latest`.  
@@ -32,10 +32,10 @@ This project simulates such a scenario for the **Nautilus DevOps team**, where a
    - Mounted volume (`log-volume`) at `/opt/dba/time`.  
 
    - Environment variable `TIME_FREQ` is injected from the ConfigMap.  
-
+![Screenshot](screenshots/pod-status.png)
 5. **Verified logs**  
    - Confirmed timestamps are continuously written to `/opt/dba/time/time-check.log`.
-
+![Screenshot](screenshots/check-log-file.png)
 ## Project Structure
 
 100-days-of-devops/
