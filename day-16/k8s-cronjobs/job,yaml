@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: countdown-devops
+spec:
+  template:
+    metadata:
+      name: countdown-devops
+    spec:
+      containers:
+      - name: container-countdown-devops
+        image: debian:latest
+        command: ["sleep", "5"]
+      restartPolicy: Never
