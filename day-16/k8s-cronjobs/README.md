@@ -23,16 +23,16 @@ kubectl apply -f countdown-job.yaml
 kubectl get jobs
 
 kubectl describe job countdown-devops
-![Screenshot](screenshots/describe-jobs.png)
+![Screenshot](screenshots/kubectl-describe-jobs.png)
 4. Verify Pods
 
 kubectl get pods
 
-![Screenshot](screenshots/get-pods.png)
+![Screenshot](screenshots/kubectl-get-pods.png)
 5. Check Logs
 
 kubectl logs countdown-devops-4wlmn
-![Screenshot](screenshots/logs.png)
+![Screenshot](screenshots/kubectl-logs.png)
 Since the command is just sleep 5, there is no output in the logs. This is expected and confirms the pod executed successfully.
 
 ## Takeaway & Learning Impact
