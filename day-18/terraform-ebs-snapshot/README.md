@@ -39,7 +39,7 @@ terraform apply -auto-approve
 6️. Verified Snapshot Status
 
 aws ec2 describe-snapshots --filters "Name=tag:Name,Values=devops-vol-ss"  --region us-east-1
-![Screenshot](screenshots/snaoshot-completed.png)
+![Screenshot](screenshots/snapshot-completed.png)
 
 ## Key Learnings
 1. Automating cloud backups ensures data consistency and reliability.
