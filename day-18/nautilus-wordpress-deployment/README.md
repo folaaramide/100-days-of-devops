@@ -29,7 +29,7 @@ By completing this task, I demonstrated the ability to setup, configure, and val
 
 •	Configured Apache to serve on port 6000 (no VirtualHost needed for this task): sudo vi /etc/httpd/conf/httpd.conf
 ![Screenshot](screenshots/httpd-php-install-app.png)
-**Change Listen 80 → Listen 6000**
+**Changed Listen 80 → Listen 6000**
 
 sudo systemctl restart httpd
 
