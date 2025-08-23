@@ -1,8 +1,8 @@
 # Day 18: Automating AWS EBS Snapshot with Terraform
 
-
 ## Project Overview
 As part of my 100 Days of DevOps journey, Day 18 focused on automating backups for cloud infrastructure using Terraform. The task simulated a real-world enterprise requirement: ensuring critical data volumes are automatically backed up to prevent data loss.
+
 In this exercise, I created a **snapshot** of an existing EBS volume (devops-vol) in the us-east-1 region.
 
 ## Business Case & Benefits
@@ -14,62 +14,32 @@ In this exercise, I created a **snapshot** of an existing EBS volume (devops-vol
 This project mirrors enterprise needs to maintain reliable cloud infrastructure while automating operational tasks.
 
 ## Terraform Workflow & Steps
-1. Navigate to Terraform Directory
+1. Navigated to Terraform Directory
 
 cd /home/bob/terraform
 
 2️. Terraform Configuration (main.tf)
-
-The complete main.tf I used:
-# Provider configuration
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Existing EBS volume
-resource "aws_ebs_volume" "k8s_volume" {
-  availability_zone = "us-east-1a"
-  size              = 5
-  type              = "gp2"
-
-  tags = {
-    Name = "devops-vol"
-  }
-}
-
-# Create a snapshot of the existing volume
-resource "aws_ebs_snapshot" "devops_snapshot" {
-  volume_id   = aws_ebs_volume.k8s_volume.id
-  description = "Devops Snapshot"
-
-  tags = {
-    Name = "devops-vol-ss"
-  }
-}
-Screenshot Suggestion:
-•	terraform_snapshot_main_tf.png — showing the snapshot resource added to main.tf.
+![Screenshot](screenshots/main.tf.png)
 
 3️. Initialized Terraform
+
 terraform init
-Screenshot Suggestion:
-•	terraform_init.png — showing successful initialization.
-________________________________________
+![Screenshot](screenshots/terraform-init.png)
 4️. Previewed Terraform Plan
+
 terraform plan
-•	Ensure Terraform will create aws_ebs_snapshot.devops_snapshot.
-Screenshot Suggestion:
-•	terraform_plan_snapshot.png — showing planned snapshot creation.
-________________________________________
+
+•	Ensured Terraform will create aws_ebs_snapshot.devops_snapshot.
+![Screenshot](screenshots/terraform-plan.png)
 5️. Applied Terraform Configuration
 terraform apply -auto-approve
-•	Terraform automatically creates the snapshot.
-Screenshot Suggestion:
-•	terraform_apply_snapshot.png — showing apply success message.
 
+•	Terraform automatically creates the snapshot.
+![Screenshot](screenshots/terraform-apply.png)
 6️. Verified Snapshot Status
 
 aws ec2 describe-snapshots --filters "Name=tag:Name,Values=devops-vol-ss"  --region us-east-1
-•	snapshot_completed.png — showing "State": "completed" in AWS CLI output.
+![Screenshot](screenshots/snaoshot-completed.png)
 
 ## Key Learnings
 1. Automating cloud backups ensures data consistency and reliability.
