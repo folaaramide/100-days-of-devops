@@ -1,4 +1,4 @@
-# Day 19 – Monitoring with AWS CloudWatch + Terraform
+# Day 19 - Monitoring with AWS CloudWatch + Terraform
 
 As part of my 100 Days of DevOps journey, I worked on setting up monitoring using AWS CloudWatch and automated the configuration with Terraform.
 
@@ -22,42 +22,17 @@ The Nautilus DevOps team needed proactive monitoring of their compute resources.
 Since the KodeKloud lab did not provide an EC2 instance ID, I implemented the alarm without the dimensions block.
 
 This created a generic CloudWatch alarm that demonstrates the full workflow and satisfies the lab requirement.
-
-provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_cloudwatch_metric_alarm" "datacenter_alarm" {
-  alarm_name          = "datacenter-alarm"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
-  metric_name         = "CPUUtilization"
-  namespace           = "AWS/EC2"
-  period              = 300
-  statistic           = "Average"
-  threshold           = 80
-  alarm_description   = "Triggers when CPU exceeds 80% for 5 minutes"
-  actions_enabled     = true
-}
-
+![Screenshot](screenshots/main.tf.png)
+![Screenshot](screenshots/terraform-show.png)
 ## Business Context
 In real production environments, alarms like this would be tied directly to an EC2 instance using the dimensions block.
 
 That way, CloudWatch knows exactly which resource to monitor.
 
 However, even in this lab context, the project highlights:
-- Observability – Ensuring systems are monitored proactively.
-- Automation – Using Terraform to define and deploy monitoring as code.
-- Scalability – Easily extend this code to monitor multiple instances.
-
-📸 Screenshots
-1.	terraform-directory.png – Working directory in VS Code
-2.	main-tf-config.png – Terraform configuration in main.tf
-3.	terraform-init.png – Terraform initialization
-4.	terraform-validate.png – Validation successful
-5.	terraform-plan.png – Plan output showing alarm resource
-6.	terraform-apply.png – Apply output confirming alarm creation
-7.	cloudwatch-alarm.png – AWS Console showing CloudWatch alarm
+- Observability: Ensuring systems are monitored proactively.
+- Automation: Using Terraform to define and deploy monitoring as code.
+- Scalability: Easily extend this code to monitor multiple instances.
 
 ## Outcome
 •	Successfully created an AWS CloudWatch alarm with Terraform.
