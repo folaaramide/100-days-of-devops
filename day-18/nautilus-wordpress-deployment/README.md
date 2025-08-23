@@ -28,7 +28,7 @@ By completing this task, I demonstrated the ability to setup, configure, and val
 •	Installed Apache and PHP: sudo yum install -y httpd php php-mysqlnd php-cli
 
 •	Configured Apache to serve on port 6000 (no VirtualHost needed for this task): sudo vi /etc/httpd/conf/httpd.conf
-
+![Screenshot](screenshots/httpd-php-install-app.png)
 **Change Listen 80 → Listen 6000**
 
 sudo systemctl restart httpd
@@ -37,7 +37,7 @@ sudo systemctl enable httpd
 
 Screenshot Suggestion:
 
-•	apache_port_6000_config.png — showing the changed Listen directive.
+![Screenshot](screenshots/apache_port_6000_config.png)
 
 2. Setup DB Server
 
@@ -55,10 +55,6 @@ sudo systemctl enable mariadb
 
 sudo mysql
 
-Screenshot Suggestion:
-
-•	mariadb_login_sudo.png — showing successful login.
-
 3. Database & User Management
 
 Server: DB Server
@@ -72,9 +68,7 @@ CREATE USER 'kodekloud_cap'@'%' IDENTIFIED BY 'dCV3szSGNA';
 GRANT ALL PRIVILEGES ON kodekloud_db5.* TO 'kodekloud_cap'@'%';
 
 FLUSH PRIVILEGES;
-Screenshot Suggestions:
-•	db_user_created.png — showing the user and privileges.
-•	database_created.png — confirming the database exists.
+![Screenshot](screenshots/mariadb_login_sudo.png)
 
 4. Testing DB Connectivity
 
@@ -93,10 +87,8 @@ DROP TABLE t_check;
 •	Confirmed App → DB connectivity via KodeKloud LBR App button.
 
 Message displayed: "App is able to connect to the database using user kodekloud_cap"
-Screenshot Suggestions:
-•	db_connectivity_test.png — PHP/MySQL connection output.
-•	lbr_success_message.png — the KodeKloud LBR interface showing success.
-
+![Screenshot](screenshots/db_connectivity_test.png)
+![Screenshot](screenshots/lbr_success_message.png)
 ## Key Learnings
 1. Understanding the flow of multi-tier application deployment.
 2. Configuring Apache on a non-standard port (6000).
