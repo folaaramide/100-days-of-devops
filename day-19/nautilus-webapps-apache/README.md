@@ -28,7 +28,7 @@ sudo yum install httpd -y
 sudo sed -i 's/^Listen 80/Listen 6400/' /etc/httpd/conf/httpd.conf
 
 grep Listen /etc/httpd/conf/httpd.conf
-![Screenshot](screenshots/listen-port-update.png)
+![Screenshot](screenshots/listen_port_update.png)
 3. Prepared Directories for the Sites
 
 sudo mkdir -p /var/www/html/news
@@ -52,7 +52,7 @@ On App Server 3:
 sudo cp -r /tmp/* /var/www/html/news/
 
 sudo cp -r /tmp/* /var/www/html/games/
-![Screenshot](screenshots/sudo_co_var_www.png)
+![Screenshot](screenshots/sudo_cp_var_www.png)
 5. Configured Virtual Hosts
 
 Created a new Apache config file:
