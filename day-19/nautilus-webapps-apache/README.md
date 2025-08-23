@@ -28,13 +28,13 @@ sudo yum install httpd -y
 sudo sed -i 's/^Listen 80/Listen 6400/' /etc/httpd/conf/httpd.conf
 
 grep Listen /etc/httpd/conf/httpd.conf
-
+![Screenshot](screenshots/listen-port-update.png)
 3. Prepared Directories for the Sites
 
 sudo mkdir -p /var/www/html/news
 
 sudo mkdir -p /var/www/html/games
-
+![Screenshot](screenshots/dir_creation.png)
 4. Transferred Website Backups from Jump Host
 
 Initially, direct scp failed due to permissions on /var/www/html/.
@@ -46,13 +46,13 @@ From jump_host:
 scp -r /home/thor/news/*  banner@stapp03:/tmp/
 
 scp -r /home/thor/games/* banner@stapp03:/tmp/
-
+![Screenshot](screenshots/scp_copy_tmp.png)
 On App Server 3:
 
 sudo cp -r /tmp/* /var/www/html/news/
 
 sudo cp -r /tmp/* /var/www/html/games/
-
+![Screenshot](screenshots/sudo_co_var_www.png)
 5. Configured Virtual Hosts
 
 Created a new Apache config file:
@@ -84,7 +84,7 @@ Added:
     </Directory>
 
 </VirtualHost>
-
+![Screenshot](screenshots/apache_config_file.png)
 6. Restarted Apache
 
 sudo systemctl restart httpd
@@ -98,8 +98,11 @@ sudo systemctl status httpd
 curl http://localhost:6400/news/
 
 curl http://localhost:6400/games/
+![Screenshot](screenshots/curl-test.png)
 
 ## Key Takeaways
 •	Learned how to configure Apache to serve multiple sites on a custom port.
+
 •	Solved a real-world permissions issue by staging files in /tmp/ and moving with sudo.
+
 •	Reinforced the DevOps principle of infra readiness, ensuring operations and dev teams can work in parallel.
