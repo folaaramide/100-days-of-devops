@@ -1,6 +1,6 @@
-# Day 20 of 100 Days of DevOps — Deploying a PHP-FPM 8.1 App with Nginx on Custom Port
+# Day 20 of 100 Days of DevOps - Deploying a PHP-FPM 8.1 App with Nginx on Custom Port
 As part of my 100 Days of DevOps journey (see GitHub repo and LinkedIn), today I focused on deploying a PHP-based application on CentOS 9 servers using Nginx and PHP-FPM 8.1.
-This was more than just installing packages — it was about aligning infrastructure setup with business requirements, ensuring scalability, security, and application reliability.
+This was more than just installing packages, it was about aligning infrastructure setup with business requirements, ensuring scalability, security, and application reliability.
 
 ## Business Context
 The Nautilus application development team needed to launch a new PHP-based web application.
@@ -13,7 +13,7 @@ From a business standpoint, the requirements were clear:
 4.	Unified Document Root **/var/www/html**: standard path for easier deployments and CI/CD pipelines.
 
 ## Workflow & Commands
-1️. Install & Configure Nginx
+1️. Installed & Configured Nginx
 
 **Update system**
 
@@ -26,41 +26,12 @@ sudo dnf install -y nginx
 **Start & enable service**
 
 sudo systemctl enable --now nginx
-
+![Screenshot](screenshots/nginx-install-enable.png)
 **Update Nginx config to listen on 8092 and use /var/www/html as document root:**
-
-server {
-
-    listen 8092;
-    
-    server_name _;
-    
-    root /var/www/html;
-
-    index index.php index.html;
-
-    location / {
-    
-        try_files $uri $uri/ =404;
-    }
-    
-
-    location ~ \.php$ {
-    
-        include fastcgi_params;
-        
-        fastcgi_pass unix:/var/run/php-fpm/default.sock;
-        
-        fastcgi_index index.php;
-        
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    }
-    
-}
+![Screenshot](screenshots/nginx-config-update.png)
 **Reload Nginx:**
 
 sudo systemctl reload nginx
-📸 Screenshot: ss -tulnp | grep nginx showing port 8092 binding
 
 2️. Installed PHP-FPM 8.1
 
@@ -80,7 +51,7 @@ sudo mkdir -p /var/run/php-fpm
 
 sudo vi /etc/php-fpm.d/www.conf
 
-Ensure these settings:
+Ensured these settings:
 
 listen = /var/run/php-fpm/default.sock
 
@@ -95,19 +66,18 @@ Restart PHP-FPM:
 sudo systemctl enable --now php-fpm
 
 sudo systemctl restart php-fpm
-📸 Screenshot: php -v showing PHP 8.1 installed
-
+![Screenshot](screenshots/php-8.1-installed.png)
 3️. Deploy Test PHP File
 echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/index.php
 Or use the provided lab welcome file:
 echo "<?php echo 'Welcome to xFusionCorp Industries!'; ?>" | sudo tee /var/www/html/index.php
-📸 Screenshot: ls -l /var/www/html/ showing index.php file
+![Screenshot](screenshots/test-php-file-deployed.png)
 4. Test the Setup
 
 From the jump host: curl http://stapp01:8092/index.php
 
 Expected output: Welcome to xFusionCorp Industries!
-📸 Screenshot: curl output with welcome message
+![Screenshot](screenshots/curl-output.png)
 
 ## Business Value Delivered
 •	Developer Alignment: Infrastructure matched dev team’s runtime (PHP 8.1) → fewer bugs at deployment.
