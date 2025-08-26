@@ -80,7 +80,7 @@ kubectl rollout status deployment/nginx-deployment
 kubectl describe deployment nginx-deployment | grep -i image
 
 Result: Image successfully updated to nginx:latest.
-![Screenshot](screenshots/image-updated.png)
+![Screenshot](screenshots/final-state.png)
 
 6. Final Validation
 
@@ -97,7 +97,6 @@ Outcome:
 •	Replicas = 5
 
 •	Service nodePort updated to 32165
-![Screenshot](screenshots/final-state.png)
 
 ## Benefits of This Task
 1. Demonstrated application of Kubernetes update strategy (real-world use case for production).
