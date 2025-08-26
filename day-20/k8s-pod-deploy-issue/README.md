@@ -3,6 +3,7 @@ As part of my 100 Days of DevOps challenge on KodeKloud, I tackled a real-world 
 
 ## Business Context
 For any business running on Kubernetes:
+
 -A pod in ImagePullBackOff means services are unavailable.
 
 =Unavailability can lead to customer dissatisfaction, SLA breaches, and revenue loss.
@@ -24,7 +25,7 @@ All commands were run on the jump_host, which is configured with kubectl access 
 
 kubectl get pods
 
-📸 pods-list.png
+![Screenshot](screenshots/pod-list.png)
 
 2️. Describe Pod for Details
 
@@ -39,8 +40,7 @@ Back-off pulling image "nginx:latests"
 Failed to pull image "nginx:latests": not found
 
 **Discovery:** The nginx container was pointing to nginx:latests (typo) instead of nginx:latest.
-📸 pod-describe.png
-
+![Screenshot](screenshots/pod-describe.png)
 3️. Extract Pod YAML
 
 kubectl get pod webserver -o yaml > webserver.yaml
@@ -49,11 +49,7 @@ cat webserver.yaml
 
 Snippet showing the error:
 
-containers:
-  - name: nginx-container
-    image: nginx:latests    # ❌ Incorrect
-📸 yaml-before.png
-
+![Screenshot](screenshots/yaml-before.png)
 4️. Fix the Typo in YAML
 
 Edited webserver.yaml:
@@ -64,24 +60,7 @@ containers:
   
     **image: nginx:latest**
 
-    volumeMounts:
-
-    - mountPath: /var/log/nginx
-    
-      name: shared-logs
-  
-  - name: sidecar-container
-  
-    image: ubuntu:latest
-
-    command: ["sh", "-c", "while true; do cat /var/log/nginx/access.log /var/log/nginx/error.log; sleep 30; done"]
-    volumeMounts:
-    - mountPath: /var/log/nginx
-      name: shared-logs
-volumes:
-  - emptyDir: {}
-    name: shared-logs
-📸 yaml-fixed.png
+![Screenshot](screenshots/yaml-fixed.png)
 
 5. Re-deploy Pod
 
@@ -91,7 +70,7 @@ kubectl delete pod webserver
 
 kubectl apply -f webserver.yaml
 
-📸 apply-fix.png
+![Screenshot](screenshots/apply-fix.png)
 
 6️. Verify Pod is Running
 
@@ -100,23 +79,13 @@ kubectl get pods
 kubectl describe pod webserver
 
 Observed: Pod moved to Running state.
-📸 pod-running.png
+![Screenshot](screenshots/pod-running.png)
 
 7️. Validate Application Access
 
 kubectl exec -it webserver -c nginx-container -- curl localhost
 
-Output:
-
-<!DOCTYPE html>
-<html>
-<head><title>Welcome to nginx!</title></head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and working.</p>
-</body>
-</html>
-📸 nginx-access.png
+Output:![Screenshot](screenshots/nginx-access.png)
 
 ## Outcome
 1. Root Cause: Typo in container image (nginx:latests instead of nginx:latest).
