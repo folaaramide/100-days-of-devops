@@ -1,4 +1,4 @@
-# Day 21 of 100 Days of DevOps — Git Repository Setup on Storage Server
+# Day 21 of 100 Days of DevOps - Git Repository Setup on Storage Server
 As part of my 100 Days of DevOps journey, today I worked on a task from the Nautilus project team that reflects a real-world infrastructure & application lifecycle requirement.
 
 ## Business Need & Essence
