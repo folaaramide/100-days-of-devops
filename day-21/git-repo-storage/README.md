@@ -24,7 +24,7 @@ First, I confirmed that Git was installed on the storage server.
 git --version
 
 git version 2.47.3
-
+![Screenshot](screenshots/git-install-check.png)
 2️. Create the Bare Repository
 
 The requirement was to create a bare Git repository named exactly /opt/news.git.
@@ -42,7 +42,7 @@ List the repository directory to confirm the expected structure:
 ls -l /opt/news.git
 
 Output included folders like branches/, hooks/, objects/, refs/, confirming bare repo layout.
-
+![Screenshot](screenshots/git-repo-creation-structure.png)
 4️. Double Check it is Bare
 
 To remove any doubt, I ran:
@@ -54,7 +54,7 @@ Output:
 true
 
 This confirms the repository was initialized as bare (no working directory).
-
+![Screenshot](screenshots/repo-verification.png)
 5️. Permissions Check
 
 Lastly, checked permissions to ensure accessibility:
@@ -62,19 +62,7 @@ Lastly, checked permissions to ensure accessibility:
 ls -ld /opt/news.git
 
 Output showed: drwxr-xr-x 7 root root ...
-
-📸 Suggested Screenshots
-For GitHub README and LinkedIn post:
-1.	Git Installation Check → screenshot of git --version
-o	Save as: day20_git_version.png
-2.	Repository Creation → screenshot of git init --bare /opt/news.git output
-o	Save as: day20_repo_init.png
-3.	Repo Structure → screenshot of ls -l /opt/news.git
-o	Save as: day20_repo_structure.png
-4.	Bare Repo Verification → screenshot of rev-parse output
-o	Save as: day20_repo_verify.png
-5.	Final Permissions → screenshot of ls -ld /opt/news.git
-o	Save as: day20_repo_permissions.png
+![Screenshot](screenshots/repo-permissions.png)
 
 ## Reflection & Benefits
 
