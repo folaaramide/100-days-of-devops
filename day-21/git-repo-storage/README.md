@@ -42,7 +42,7 @@ List the repository directory to confirm the expected structure:
 ls -l /opt/news.git
 
 Output included folders like branches/, hooks/, objects/, refs/, confirming bare repo layout.
-![Screenshot](screenshots/git-repo-creation-structure.png)
+![Screenshot](screenshots/repo-creation-structure.png)
 4️. Double Check it is Bare
 
 To remove any doubt, I ran:
