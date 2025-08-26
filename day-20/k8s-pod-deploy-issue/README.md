@@ -6,7 +6,7 @@ For any business running on Kubernetes:
 
 -A pod in ImagePullBackOff means services are unavailable.
 
-=Unavailability can lead to customer dissatisfaction, SLA breaches, and revenue loss.
+-Unavailability can lead to customer dissatisfaction, SLA breaches, and revenue loss.
 
 -As a DevOps Engineer, ensuring pods run correctly is critical for service reliability and business continuity.
 
