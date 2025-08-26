@@ -24,8 +24,7 @@ kubectl get svc
 
 Outcome: Confirmed nginx-deployment (replicas=1, image=nginx:1.18) and nginx-service (nodePort=30008).
 
-📸 Screenshot: s1_initial_resources.png
-
+![Screenshot](screenshots/initial-resources.png)
 2. Modified the Service NodePort
 
 kubectl edit svc nginx-service
@@ -38,7 +37,7 @@ Verification:
 
 kubectl get svc nginx-service -o yaml | grep nodePort
 
-📸 Screenshot: s2_service_nodeport_updated.png
+![Screenshot](screenshots/service-nodeport.png)
 
 3. Scaled Deployment Replicas
 
@@ -50,7 +49,7 @@ kubectl get deployments
 
 kubectl get pods -o wide
 
-📸 Screenshot: s3_scaled_deployment.png
+![Screenshot](screenshots/scaled-deployment.png)
 
 4. Checked Container Name Before Updating Image
 
@@ -67,7 +66,7 @@ So I inspected the deployment:
 kubectl describe deployment nginx-deployment | grep -i "container name"
 
 Result: The container name was container-nginx, not nginx.
-
+![Screenshot](screenshots/container-name.png)
 5. Updated Image Version
 
 With the correct container name:
@@ -81,7 +80,7 @@ kubectl rollout status deployment/nginx-deployment
 kubectl describe deployment nginx-deployment | grep -i image
 
 Result: Image successfully updated to nginx:latest.
-📸 Screenshot: s4_image_updated.png
+![Screenshot](screenshots/image-updated.png)
 
 6. Final Validation
 
@@ -98,7 +97,7 @@ Outcome:
 •	Replicas = 5
 
 •	Service nodePort updated to 32165
-📸 Screenshot: s5_final_state.png
+![Screenshot](screenshots/final-state.png)
 
 ## Benefits of This Task
 1. Demonstrated application of Kubernetes update strategy (real-world use case for production).
