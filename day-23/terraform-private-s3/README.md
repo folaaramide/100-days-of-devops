@@ -78,8 +78,6 @@ terraform show
 
 •	Confirmed bucket exists in state.
 
-•	Screenshot: day23_06_show.png
-
 **AWS CLI - List Buckets**
 
 aws s3 ls
