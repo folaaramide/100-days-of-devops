@@ -35,7 +35,7 @@ o	aws_s3_bucket → Bucket xfusion-s3-1301
 o	aws_s3_bucket_public_access_block → Blocks all public access
 
 •	Business Benefit: Prevents accidental public exposure of sensitive data.
-
+![Screenshot](screenshots/main,tf.png)
 3. Initialize Terraform
 
 terraform init
@@ -43,7 +43,7 @@ terraform init
 •	Downloads provider plugins and prepares workspace.
 
 •	Benefit: Ensures repeatable infrastructure provisioning.
-
+![Screenshot](screenshots/terraform-init.png)
 4. Validate Configuration
 
 terraform validate
@@ -51,7 +51,7 @@ terraform validate
 •	Checks syntax and configuration.
 
 •	Business Value: Reduces risk of misconfiguration and downtime.
-
+![Screenshot](screenshots/terraform-validate.png)
 6️. Plan Changes
 
 terraform plan
@@ -59,7 +59,7 @@ terraform plan
 •	Previewed the creation of the private bucket.
 
 •	Essence: Safe, predictable deployment planning.
-
+![Screenshot](screenshots/terraform-plan.png)
 6. Apply Configuration
 
 terraform apply
@@ -69,7 +69,7 @@ terraform apply
 •	Bucket xfusion-s3-1301 created successfully.
 
 •	Business Benefit: Infrastructure is provisioned as code, fast, and reproducible.
-
+![Screenshot](screenshots/terraform-apply.png)
 7. Verify Resources
 
 **Terraform show**
@@ -80,7 +80,7 @@ terraform show
 
 •	Screenshot: day23_06_show.png
 
-**AWS CLI – List Buckets**
+**AWS CLI - List Buckets**
 
 aws s3 ls
 
@@ -93,7 +93,7 @@ aws s3api get-bucket-public-access-block --bucket xfusion-s3-1301
 •	All flags (BlockPublicAcls, BlockPublicPolicy, etc.) are true.
 
 •	Business Value: Ensures compliance and security for sensitive data.
-
+![Screenshot](screenshots/aws-cli-verify.png)
 ## Key Learnings
 •	Created a private S3 bucket using Terraform.
 
