@@ -4,7 +4,7 @@ For the past 21 days, I have been building up my DevOps skillset by mastering Li
 
 On Day 22, I faced a challenge that looks simple at first glance, cloning a Git repository, but carried a lot of subtle technical and business lessons around permissions, ownership, and how central repositories are managed in production environments.
 
-## Business Context — Why This Task Matters
+## Business Context - Why This Task Matters
 In enterprise environments, bare Git repositories (like /opt/media.git in this lab) act as the central source of truth for application code. Teams don’t commit directly on these; instead, they clone them into working directories where they can build, test, and deploy.
 
 This lab simulates a Storage Server in a data center, where the Nautilus application team needed a working copy of an existing repository so they could start development and CI/CD pipelines.
@@ -22,29 +22,23 @@ Here’s the exact working solution that satisfied the lab requirements:
 
 # Step 1: Confirm the source repository exists and is readable
 
-ls -ld /opt/media.git
+ls -ld /opt/apps.git
 
-# Step 2: Ensure the destination directory exists and is owned by the correct user
-
-sudo mkdir -p /usr/src/kodekloudrepos
-
-sudo chown natasha:natasha /usr/src/kodekloudrepos
-
-# Step 3: Move into the target directory (important: don’t clone directly into the parent)
+# Step 2: Move into the target directory (important: don’t clone directly into the parent)
 
 cd /usr/src/kodekloudrepos
 
-# Step 4: Clone the repository (creates a new subfolder: media/)
+# Step 3: Clone the repository (creates a new subfolder: media/)
 
-git clone /opt/media.git
+git clone /opt/apps.git
 
 # Step 5: Verify the clone
 
-ls -a /usr/src/kodekloudrepos/media
+ls -a /usr/src/kodekloudrepos/apps
 
-git -C /usr/src/kodekloudrepos/media remote -v
+git -C /usr/src/kodekloudrepos/apps remote -v
 
-ls -ld /usr/src/kodekloudrepos/media
+ls -ld /usr/src/kodekloudrepos/apps
 
 ## Expected Results
 
@@ -55,7 +49,7 @@ Inside it, .git/ exists, meaning it is a proper Git repo.
 Running git remote -v shows the origin correctly set to /opt/media.git.
 
 Ownership of the folder matches the application user (natasha in this case).
-
+![Screenshot](screenshots/git-clone.png)
 **Key Note**: Running git clone /opt/media.git /usr/src/kodekloudrepos directly would turn the parent folder into a Git repo itself, which fails validation and does not meet the business requirement.
 
 ## Lessons Learned
