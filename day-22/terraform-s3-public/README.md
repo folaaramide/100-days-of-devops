@@ -10,7 +10,7 @@ This task mimics what a DevOps engineer would do during a data migration to AWS 
 
 terraform init
 
-2️2. Validate Configuration
+2. Validate Configuration
 
 terraform validate
 
