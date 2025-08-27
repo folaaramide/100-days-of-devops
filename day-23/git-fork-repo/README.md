@@ -2,7 +2,7 @@
 ## Scenario:
 The Nautilus project uses a Gitea Git server for collaboration. A new developer, Jon, needs to start working on a project. To contribute safely without affecting the main repository, he must fork an existing repository.
 
-This lab demonstrates how to navigate a Git web UI, fork a repository, and set up proper remotes — essential skills for DevOps engineers working in collaborative, team-based environments.
+This lab demonstrates how to navigate a Git web UI, fork a repository, and set up proper remotes; these are essential skills for DevOps engineers working in collaborative, team-based environments.
 
 ## Lab Environment & Credentials
 •	Platform: KodeKloud Lab
@@ -21,10 +21,6 @@ o	Password: Jon_pass123
 1️. Open Gitea UI
 
 •	Click the Gitea UI button at the top of the lab page.
-
-•	Screenshot suggestion: Gitea UI button highlighted
-
-•	PNG label: day23_01_gitea_ui.png
 
 2️. Log in as Jon
 
