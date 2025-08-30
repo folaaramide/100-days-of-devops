@@ -32,7 +32,7 @@ cd /usr/src/kodekloudrepos/news
 
 pwd
 
-- Confirms the working directory; Always working in the correct repo to avoid mistakes.
+-Confirms the working directory; Always working in the correct repo to avoid mistakes.
 
 3️. Fix Git Permission Issues
 
@@ -44,7 +44,7 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/news
 
 sudo chown -R natasha:natasha /usr/src/kodekloudrepos/news
 
-- Solves errors like “dubious ownership” or “permission denied”; Avoids workflow interruptions due to permissions.
+-Solves errors like “dubious ownership” or “permission denied”; Avoids workflow interruptions due to permissions.
 
 4️. Verify Current Branch
 
@@ -52,7 +52,7 @@ git branch
 
 git status
 
-- Ensures being on master before creating a new branch.
+-Ensures being on master before creating a new branch.
 
 ![Screenshot](screenshots/verify-current-branch.png)
 
@@ -68,7 +68,7 @@ git pull origin master
 
 git checkout -b xfusioncorp_news master
 
-- Creates and switches to xfusioncorp_news; Isolates new feature work from production.
+-Creates and switches to xfusioncorp_news; Isolates new feature work from production.
 
 7️. Verify New Branch
 
@@ -80,7 +80,7 @@ git branch
 
 git push origin xfusioncorp_news
 
-- Ensures branch exists on the remote for collaboration.
+-Ensures branch exists on the remote for collaboration.
 
 ## Key Learnings
 - Learned proper branching workflow in Git.
