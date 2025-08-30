@@ -24,6 +24,7 @@ This exercise mirrors those scenarios by practicing a **feature branch workflow*
 3. git branch -a
 
 -Confirmed origin and fixed Git ownership warning.
+![Screenshot](screenshots/fixed-permissions.png)
 
 2. Checkout Master & Sync
 
@@ -38,6 +39,7 @@ sudo git pull origin master
 sudo git checkout -b nautilus
 
 -Created nautilus branch for isolated changes.
+![Screenshot](screenshots/update-local-repo.png)
 
 4. Add Business Change (index.html)
 
@@ -54,6 +56,7 @@ sudo git add index.html
 sudo git commit -m "Add index.html from /tmp"
 
 -Tracked changes and committed them with a clear message.
+![Screenshot](screenshots/add-commit-feature.png)
 
 6. Push Feature Branch
 
@@ -68,19 +71,18 @@ sudo git checkout master
 sudo git merge --no-ff nautilus -m "Merge branch 'nautilus' into master"
 
 -Integrated the feature branch safely back into master.
-
+![Screenshot](screenshots/push-feature-merge-origin.png)
 8. Push Updated Master
 
 sudo git push origin master
 
 -Propagated the merged updates to the origin.
-
 9. Verify Remote State
 
 sudo git ls-remote --heads origin
 
 -Confirmed both master and nautilus branches exist at the origin.
-
+![Screenshot](screenshots/push-updated-master-verify.png)
 ## Benefits of the Exercise
 Practiced Git branching strategies commonly used in production workflows.
 
