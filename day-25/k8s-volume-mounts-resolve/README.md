@@ -84,19 +84,6 @@ Why does this matter in the real world?
 •	Resilience: Shared volumes ensure consistency of application files across containers in the same Pod.
 
 This lab mirrors real production troubleshooting where misconfigured reverse proxies can take down customer-facing apps.
-________________________________________
-📸 Suggested Screenshots for GitHub + LinkedIn
-1.	Pod status before fix: kubectl get pods -n default -w → (CrashLoopBackOff)
-o	Save as 01_pod_crash.png
-2.	Default Nginx config (wrong):
-3.	kubectl exec -it nginx-phpfpm -c nginx-container -- cat /etc/nginx/conf.d/default.conf
-o	Save as 02_wrong_conf.png
-4.	Editing and copying new default.conf (kubectl cp success).
-o	Save as 03_conf_fix.png
-5.	Shared volume check (ls -l in both containers).
-o	Save as 04_shared_volume.png
-6.	Final success screenshot: Website showing PHP page.
-o	Save as 05_success.png
 
 ## Reflections (Day 25 / 100)
 Today’s lesson was a deep dive into real-world debugging of multi-container pods in Kubernetes.
