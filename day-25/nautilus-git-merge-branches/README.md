@@ -72,6 +72,7 @@ sudo git merge --no-ff nautilus -m "Merge branch 'nautilus' into master"
 
 -Integrated the feature branch safely back into master.
 ![Screenshot](screenshots/push-feature-merge-origin.png)
+
 8. Push Updated Master
 
 sudo git push origin master
