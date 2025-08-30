@@ -19,19 +19,6 @@ The Nautilus development team wanted to implement new features in the news proje
 
 •	Aligns with DevOps principles: version control, collaboration, and CI/CD readiness.
 
-🔹Screenshots to Capture
-To make this recruiter-friendly and lab-review ready, capture the following steps:
-Step	Screenshot Suggestion	PNG Label
-SSH into Storage server	Terminal showing connection	day24_01_ssh_storage.png
-Navigate to repo	Terminal showing pwd in /usr/src/kodekloudrepos/news	day24_02_nav_repo.png
-Permission fix for Git	git config --global --add safe.directory or sudo chown -R commands	day24_03_fix_permissions.png
-Verify current branch	git branch showing master	day24_04_branch_master.png
-Pull latest master	Terminal showing git pull origin master	day24_05_pull_master.png
-Create new branch	git checkout -b xfusioncorp_news master	day24_06_create_branch.png
-Verify new branch	git branch showing xfusioncorp_news	day24_07_verify_branch.png
-Optional: Push branch to remote	git push origin xfusioncorp_news	day24_08_push_remote.png
-Optional LinkedIn tip: Use 2-3 clean screenshots, like branch creation and verification, to showcase workflow to recruiters.
-
 ## Step-by-Step Implementation
 1. SSH into Storage Server
 
@@ -46,7 +33,6 @@ cd /usr/src/kodekloudrepos/news
 pwd
 
 - Confirms the working directory; Always working in the correct repo to avoid mistakes.
-•	Screenshot: day24_02_nav_repo.png
 
 3️. Fix Git Permission Issues
 
@@ -58,48 +44,41 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/news
 
 sudo chown -R natasha:natasha /usr/src/kodekloudrepos/news
 
-•	Solves errors like “dubious ownership” or “permission denied”; Benefit: Avoids workflow interruptions due to permissions.
-
-•	Screenshot: day24_03_fix_permissions.png
+- Solves errors like “dubious ownership” or “permission denied”; Benefit: Avoids workflow interruptions due to permissions.
 
 4️. Verify Current Branch
 
 git branch
 
 git status
-•	Ensures being on master before creating a new branch.
+- Ensures being on master before creating a new branch.
+![Screenshot](screenshots/verify-current-branch.png)
 
-•	Screenshot: day24_04_branch_master.png
 5. Update Master Branch
 
 git pull origin master
 
 -Ensures master is up-to-date; Reduces risk of conflicts when creating a new branch.
 
-•	Screenshot: day24_05_pull_master.png
+![Screenshot](screenshots/pull-origin-branch.png)
 
 6️. Create New Branch
 
 git checkout -b xfusioncorp_news master
 
-- Creates and switches to xfusioncorp_news; Essence: Isolates new feature work from production.
+- Creates and switches to xfusioncorp_news; Isolates new feature work from production.
 
-•	Screenshot: day24_06_create_branch.png
 7️. Verify New Branch
 
 git branch
 
 -Output should show * xfusioncorp_news; Confirms branch creation and readiness for development.
 
-•	Screenshot: day24_07_verify_branch.png
-
 8. Optional: Push Branch to Remote
 
 git push origin xfusioncorp_news
 
 - Ensures branch exists on the remote for collaboration.
-
-•	Screenshot: day24_08_push_remote.png
 
 ## Key Learnings
 - Learned proper branching workflow in Git.
