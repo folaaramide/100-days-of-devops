@@ -16,25 +16,20 @@ On Day 24 of my 100 Days of DevOps challenge, I focused on enhancing application
 
 ## Steps Undertaken
 1.	YAML Configuration: Developed a YAML file (nginx-rc.yaml) defining the ReplicationController specifications, including the desired replica count, labels, and container details.
+![Screenshot](screenshots/nginx-rc.yaml.png)
 
 2.	Deployment: Applied the configuration using kubectl apply -f nginx-rc.yaml to create the ReplicationController in the Kubernetes cluster.
-
+![Screenshot](screenshots/.png)
 3.	Verification:
 
 -Checked the status of the ReplicationController with kubectl get rc.
+![Screenshot](screenshots/kubectl-get-rc.png)
 
 -Listed the pods with kubectl get pods -l app=nginx_app to ensure all were running.
+![Screenshot](screenshots/kubectl-get-pods.png)
 
 -Described the ReplicationController for detailed insights using kubectl describe rc nginx-replicationcontroller.
-
-📸 Suggested Screenshots for Documentation
-
-To effectively document this task on GitHub and LinkedIn, consider capturing the following screenshots:
-1.	ReplicationController YAML File: A screenshot of the nginx-rc.yaml file to showcase the configuration.
-2.	kubectl Apply Command: A terminal screenshot displaying the kubectl apply command and its output, confirming the creation of the ReplicationController.
-3.	kubectl Get RC: A screenshot showing the kubectl get rc command output, indicating the desired and current replica counts.
-4.	kubectl Get Pods: A screenshot of the kubectl get pods -l app=nginx_app command output, confirming all pods are in the Running state.
-5.	kubectl Describe RC: A detailed view from kubectl describe rc nginx-replicationcontroller, highlighting labels, selectors, and pod template information.
+![Screenshot](screenshots/kubectl-describe.png)
 
 ## Business and DevOps Relevance
 Implementing a ReplicationController addresses several critical aspects:
