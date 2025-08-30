@@ -93,16 +93,3 @@ Demonstrated commit discipline with atomic changes and clear messages.
 Mirrored real DevOps collaboration scenarios where multiple engineers contribute features.
 
 This exercise builds confidence for managing feature branching, merging, and remote synchronization — all of which are fundamental in cloud-native development pipelines.
-
-📸 Screenshots
-Screenshots captured during this exercise (see screenshots/ folder):
-
-01-safe-directory.png – Fixed repo ownership issue.
-
-04-create-nautilus-branch.png – Created feature branch.
-
-05-copy-file.png – Copied new file into repo.
-
-07-push-nautilus.png – Pushed new branch to origin.
-
-08-merge-master.png – Merged feature branch into master.
