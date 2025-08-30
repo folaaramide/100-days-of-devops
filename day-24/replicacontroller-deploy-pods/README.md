@@ -19,7 +19,6 @@ On Day 24 of my 100 Days of DevOps challenge, I focused on enhancing application
 ![Screenshot](screenshots/nginx-rc.yaml.png)
 
 2.	Deployment: Applied the configuration using kubectl apply -f nginx-rc.yaml to create the ReplicationController in the Kubernetes cluster.
-![Screenshot](screenshots/.png)
 3.	Verification:
 
 -Checked the status of the ReplicationController with kubectl get rc.
