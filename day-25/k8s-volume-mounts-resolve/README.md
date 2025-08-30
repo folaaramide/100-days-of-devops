@@ -28,6 +28,7 @@ location / {
     index  index.html index.htm;
 
 }
+![Screenshot](screenshots/diagnosis.png)
 
 ## Main Issue:
 •	PHP requests were not passed to php-fpm-container.
@@ -38,31 +39,7 @@ location / {
 Step 1 - Fixed the Nginx Config
 I created a proper default.conf to route PHP requests to php-fpm:
 
-cat <<EOF > /home/thor/default.conf
-server {
-    listen 80;
-    listen [::]:80;
-    server_name localhost;
-
-    root /var/www/html;
-    index index.php index.html index.htm;
-
-    location / {
-        try_files \$uri \$uri/ =404;
-    }
-
-    location ~ \.php\$ {
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
-        fastcgi_pass 127.0.0.1:9000;
-    }
-
-    error_page 500 502 503 504 /50x.html;
-    location = /50x.html {
-        root /var/www/html;
-    }
-}
-EOF
+![Screenshot](screenshots/fixed-nginx-config.png)
 
 Then copied it into the Nginx container:
 
@@ -92,8 +69,10 @@ Checked both containers see the file:
 kubectl exec -it nginx-phpfpm -c nginx-container -n default -- ls -l /usr/share/nginx/html/
 
 kubectl exec -it nginx-phpfpm -c php-fpm-container -n default -- ls -l /var/www/html/
+![Screenshot](screenshots/deploy-validate-verify.png)
 
 -Website loaded successfully via Website button (lab URL).
+![Screenshot](screenshots/live-website.png)
 
 ## Business Value
 Why does this matter in the real world?
