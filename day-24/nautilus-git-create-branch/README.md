@@ -44,14 +44,16 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/news
 
 sudo chown -R natasha:natasha /usr/src/kodekloudrepos/news
 
-- Solves errors like “dubious ownership” or “permission denied”; Benefit: Avoids workflow interruptions due to permissions.
+- Solves errors like “dubious ownership” or “permission denied”; Avoids workflow interruptions due to permissions.
 
 4️. Verify Current Branch
 
 git branch
 
 git status
+
 - Ensures being on master before creating a new branch.
+
 ![Screenshot](screenshots/verify-current-branch.png)
 
 5. Update Master Branch
