@@ -94,4 +94,4 @@ Expected result: Table output with iamgroup_jim details.
 
 4.	Scalability → Adding new team members is as easy as assigning them to the group.
 
-### Day 27 Takeaway: This task reinforced the importance of Infrastructure as Code in IAM security management. By codifying groups with Terraform, I’ve taken another step toward mastering cloud governance and access control automation.
+**Day 27 Takeaway: This task reinforced the importance of Infrastructure as Code in IAM security management. By codifying groups with Terraform, I’ve taken another step toward mastering cloud governance and access control automation.**
