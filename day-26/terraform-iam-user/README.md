@@ -1,5 +1,9 @@
 # Day 26 - Provision an IAM user with Terraform (iamuser_javed)
-Continuing my 100 Days of DevOps / Cloud journey, Day 26 focused on one of the most important foundations of cloud security: Identity and Access Management (IAM). I automated the creation of an IAM user (iamuser_javed) using Terraform from the working directory /home/bob/terraform. This README tells the story of the task (what I did), why it matters to the business, the exact commands I ran, verification steps, and suggested screenshots you can use on GitHub and LinkedIn.
+Continuing my 100 Days of DevOps / Cloud journey, Day 26 focused on one of the most important foundations of cloud security: Identity and Access Management (IAM).
+
+I automated the creation of an IAM user (iamuser_javed) using Terraform from the working directory /home/bob/terraform.
+
+This README tells the story of the task (what I did), why it matters to the business, the exact commands I ran, verification steps, and suggested screenshots you can use on GitHub and LinkedIn.
 
 ## What I built
 •	Created an IAM user named iamuser_javed with Terraform (single main.tf file)
