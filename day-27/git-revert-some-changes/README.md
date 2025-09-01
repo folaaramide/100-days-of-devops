@@ -1,5 +1,5 @@
 # Day 27 - Reverting Git Commits in Production-Like Environments
-As part of my 100 Days of DevOps journey on KodeKloud, today’s focus was on Git commit management — specifically, how to revert a faulty commit safely in a shared repository.
+As part of my 100 Days of DevOps journey on KodeKloud, today’s focus was on Git commit management, specifically, how to revert a faulty commit safely in a shared repository.
 
 This scenario was designed to mimic real-world DevOps work, where mistakes in code repositories must be handled carefully to ensure minimal disruption to development teams.
 
