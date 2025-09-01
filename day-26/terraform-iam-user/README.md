@@ -7,8 +7,11 @@ This README tells the story of the task (what I did), why it matters to the busi
 
 ## What I built
 •	Created an IAM user named iamuser_javed with Terraform (single main.tf file)
+
 •	Followed Terraform workflow: init → validate → plan → apply
+
 •	Verified user exists with AWS CLI (aws iam get-user, aws iam list-users)
+
 •	Skills demonstrated: Terraform (IaC), AWS IAM, secure automation, verification, tagging & auditability
 
 ## Business need & project essence
