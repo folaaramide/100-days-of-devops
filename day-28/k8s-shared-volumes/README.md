@@ -35,7 +35,7 @@ Kubernetes’ emptyDir volumes provide a temporary, high-performance storage sol
 
 ## Execution & Verification
 1.	Pod Creation
-![Screenshot](screenshots/voume-share.yaml.png)
+![Screenshot](screenshots/volume-share.yaml.png)
 kubectl apply -f volume-share-nautilus.yaml
 
 kubectl get pods -o wide
@@ -51,7 +51,7 @@ kubectl exec -it volume-share-nautilus -c volume-container-nautilus-1 -- sh
 echo "Hello from container 1 at $(date)" > /tmp/news/news.txt
 
 ls -l /tmp/news
-![Screenshot](screenshots/container1.png)
+![Screenshot](screenshots/container1-file.png)
 
 3.	Verify in Container 2
 
@@ -61,7 +61,7 @@ ls -l /tmp/cluster
 
 cat /tmp/cluster/news.txt
 
-![Screenshot](screenshots/container2.png)
+![Screenshot](screenshots/container2-file.png)
 ## Key Learnings
 
 •	emptyDir volumes are tied to the lifecycle of a pod → data is deleted when the pod is removed.
