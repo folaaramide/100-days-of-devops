@@ -26,8 +26,6 @@ ssh max@ststor01
 •	Navigate to Max’s home directory where the repository is cloned.
 
 •	Verify repository structure and existing branches.
-Screenshot Suggestion:
-day29_ssh_max.png – Terminal showing SSH login and repository contents.
 
 2. Explore Repository and Check Commits
 
@@ -40,9 +38,7 @@ git branch -a
 •	Confirm Max’s branch story/fox-and-grapes exists.
 
 •	Validate commit history, author info, and previous stories (e.g., Sarah’s stories).
-Screenshot Suggestion:
-day29_git_log.png – Terminal showing commit graph and branches.
-
+![Screenshot](screenshots/git-logs.png)
 3. Create a Pull Request (PR) via Gitea UI
 
 Steps:
@@ -52,6 +48,7 @@ Steps:
 2.	Log in as Max:
 
 -Username: max
+
 -Password: Max_pass123
 
 3.	Create a new PR:
@@ -62,8 +59,7 @@ Steps:
 
 -Merge into: master
 Screenshot Suggestion:
-day29_pr_creation.png – Gitea PR creation page with source and destination branches.
-
+![Screenshot](screenshots/pr-creation.png)
 4. Assign a Reviewer
 
 Steps:
@@ -73,12 +69,11 @@ Steps:
 -Click Reviewers on the right sidebar.
 
 -Add Tom as a reviewer.
-Screenshot Suggestion:
-day29_add_reviewer.png – Reviewer assignment in Gitea.
-
+![Screenshot](screenshots/reviewer-added.png)
 5. Review and Approve PR as Tom
 
 Steps:
+
 -Log out from Max’s account and log in as Tom:
 
 Username: tom
@@ -90,24 +85,9 @@ Password: Tom_pass123
 -Review the changes and approve the PR.
 
 -Merge the branch into master.
-Screenshot Suggestions:
-•	day29_review_pr.png – Tom reviewing and approving PR.
-•	day29_merge_pr.png – PR merged into master branch successfully.
-
+![Screenshot](screenshots/reviewer-approval.png)
 6. Verify Merge
-
-git checkout master
-
-git pull
-
-git log --oneline --decorate
-
-•	Ensure Max’s story is now part of the master branch.
-
-•	Confirm the commit metadata for traceability.
-Screenshot Suggestion:
-day29_master_log.png – Terminal showing merged commit in master.
-
+![Screenshot](screenshots/verify-merge.png)
 ## Key Benefits and Business Impact
 •	Branch protection: Prevents accidental or unreviewed changes to production code.
 
