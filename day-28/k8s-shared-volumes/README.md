@@ -36,6 +36,7 @@ Kubernetes’ emptyDir volumes provide a temporary, high-performance storage sol
 ## Execution & Verification
 1.	Pod Creation
 ![Screenshot](screenshots/volume-share.yaml.png)
+
 kubectl apply -f volume-share-nautilus.yaml
 
 kubectl get pods -o wide
