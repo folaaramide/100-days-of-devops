@@ -1,5 +1,5 @@
 # Day 28 - Sharing Volumes Between Containers in Kubernetes
-As part of my 100 Days of DevOps Challenge, today’s focus was on Kubernetes pod volumes — specifically, how multiple containers within a single pod can share data using an emptyDir volume.
+As part of my 100 Days of DevOps Challenge, today’s focus was on Kubernetes pod volumes, specifically, how multiple containers within a single pod can share data using an emptyDir volume.
 
 This lab builds on my earlier Kubernetes learnings (Pods, Deployments, ConfigMaps, Secrets) and moves deeper into state handling inside clusters.
 
@@ -31,46 +31,18 @@ Kubernetes’ emptyDir volumes provide a temporary, high-performance storage sol
 
 2.	Write a file (news.txt) from container 1.
 3.	Verify file availability in container 2.
-4.	Confirm shared volume works with correct permissions.
-
-## Kubernetes YAML
-Here’s the manifest I applied:
-apiVersion: v1
-kind: Pod
-metadata:
-  name: volume-share-nautilus
-spec:
-  containers:
-    - name: volume-container-nautilus-1
-      image: debian:latest
-      command: ["sh", "-c", "sleep 3600"]
-      volumeMounts:
-        - name: volume-share
-          mountPath: /tmp/news
-    - name: volume-container-nautilus-2
-      image: debian:latest
-      command: ["sh", "-c", "sleep 3600"]
-      volumeMounts:
-        - name: volume-share
-          mountPath: /tmp/cluster
-  volumes:
-    - name: volume-share
-      emptyDir: {}
-📸 Suggested screenshot (save as day26_pod_yaml.png)
-•	Take a screenshot of your volume-share-nautilus.yaml file.
+4.	Confirm shared volume works with the correct permissions.
 
 ## Execution & Verification
-
 1.	Pod Creation
-
+![Screenshot](screenshots/voume-share.yaml.png)
 kubectl apply -f volume-share-nautilus.yaml
 
 kubectl get pods -o wide
 
 •	Verified that the pod is running with 2 containers.
 
-📸 Screenshot: day26_pod_running.png
-(output of kubectl get pods -o wide)
+![Screenshot](screenshots/pod-running.png)
 
 2.	Write File in Container 1
 
@@ -79,8 +51,7 @@ kubectl exec -it volume-share-nautilus -c volume-container-nautilus-1 -- sh
 echo "Hello from container 1 at $(date)" > /tmp/news/news.txt
 
 ls -l /tmp/news
-📸 Screenshot: day26_container1_file.png
-(showing file created inside /tmp/news/)
+![Screenshot](screenshots/container1.png)
 
 3.	Verify in Container 2
 
@@ -90,9 +61,7 @@ ls -l /tmp/cluster
 
 cat /tmp/cluster/news.txt
 
-📸 Screenshot: day26_container2_file.png
-(showing same file accessible in /tmp/cluster/)
-
+![Screenshot](screenshots/container2.png)
 ## Key Learnings
 
 •	emptyDir volumes are tied to the lifecycle of a pod → data is deleted when the pod is removed.
