@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-share-nautilus
+spec:
+  containers:
+    - name: volume-container-nautilus-1
+      image: debian:latest
+      command: ["sh", "-c", "sleep 3600"]
+      volumeMounts:
+        - name: volume-share
+          mountPath: /tmp/news
+    - name: volume-container-nautilus-2
+      image: debian:latest
+      command: ["sh", "-c", "sleep 3600"]
+      volumeMounts:
+        - name: volume-share
+          mountPath: /tmp/cluster
+  volumes:
+    - name: volume-share
+      emptyDir: {}
