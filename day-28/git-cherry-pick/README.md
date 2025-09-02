@@ -27,8 +27,7 @@ git config --global --add safe.directory /usr/src/kodekloudrepos/blog
 
 git remote -v
 
-📸 Suggested Screenshot: repo-layout.png — shows repo path and remote origin.
-
+![Screenshot](screenshots/git-identity.png)
 2️. Checking Out the Feature Branch
 
 Switched to the feature branch to locate the required commit.
@@ -47,7 +46,7 @@ Switched back to master and confirmed it was already up to date with origin.
 
 sudo git checkout master
 
-📸 Suggested Screenshot: master-sync.png — shows master branch in sync.
+![Screenshot](screenshots/master-sync.png)
 
 5️. Updating Master with the Change
 
@@ -55,14 +54,12 @@ The commit was brought into master (via earlier merge work in feature). Then, I 
 
 sudo git push origin master
 
-📸 Suggested Screenshot: push-success.png — push confirmation to origin/master.
-
 6️. Verifying the Commit in Master
 
 I checked the latest commit history in master to confirm that Update info.txt was now part of origin/master.
 
 sudo git log --oneline -n 3
-
+![Screenshot](screenshots/push-success.png)
 ## Benefits of the Task
 
 Controlled changes: Only validated updates flowed into master.
@@ -72,13 +69,5 @@ Improved reliability: Reduced the chance of unfinished code reaching production.
 Traceability: Git history clearly shows who authored and pushed the change.
 
 Hands-on experience: Practiced handling “dubious ownership” warnings, syncing branches, and ensuring clean commit history.
-
-📌 Suggested Screenshot Labels
-
-repo-layout.png — Repo structure and remote origin.
-
-master-sync.png — Master branch checked out and in sync.
-
-push-success.png — Successful push of commit to origin/master.
 
 **Takeaway: This exercise sharpened my ability to manage branch hygiene in Git — a critical DevOps skill for ensuring production reliability while still supporting fast delivery.**
