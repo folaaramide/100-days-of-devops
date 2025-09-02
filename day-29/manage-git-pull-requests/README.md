@@ -26,6 +26,7 @@ ssh max@ststor01
 •	Navigate to Max’s home directory where the repository is cloned.
 
 •	Verify repository structure and existing branches.
+![Screenshot](screenshots/repo-layout.png)
 
 2. Explore Repository and Check Commits
 
@@ -38,7 +39,7 @@ git branch -a
 •	Confirm Max’s branch story/fox-and-grapes exists.
 
 •	Validate commit history, author info, and previous stories (e.g., Sarah’s stories).
-![Screenshot](screenshots/git-logs.png)
+![Screenshot](screenshots/git-log.png)
 3. Create a Pull Request (PR) via Gitea UI
 
 Steps:
@@ -58,7 +59,6 @@ Steps:
 -Pull from branch: story/fox-and-grapes
 
 -Merge into: master
-Screenshot Suggestion:
 ![Screenshot](screenshots/pr-creation.png)
 4. Assign a Reviewer
 
@@ -98,15 +98,5 @@ Password: Tom_pass123
 •	Auditability: Full history of commits and approvals is preserved.
 
 •	Professional workflow experience: Mirrors real-world DevOps practices in a safe, simulated environment.
-
-Suggested PNG Labels for Portfolio
-Screenshot	Label
-day29_ssh_max.png	SSH into Storage Server
-day29_git_log.png	Explore Repository & Commits
-day29_pr_creation.png	PR Creation on Gitea
-day29_add_reviewer.png	Assign Reviewer
-day29_review_pr.png	Reviewer Approves PR
-day29_merge_pr.png	Merge PR into Master Branch
-day29_master_log.png	Verify Commit in Master
 
 ### Lab Outcome: Max’s story was successfully merged into master only after peer review, ensuring a safe, collaborative, and professional workflow.
