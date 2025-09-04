@@ -25,11 +25,11 @@ I connected to the Storage Server in Stratos DC and switched to root since the r
 
 I validated the Git repo with:
 
-•	git status — checked the working tree.
+•	git status: checked the working tree.
 
-•	git remote -v — confirmed the remote origin.
+•	git remote -v: confirmed the remote origin.
 
-•	git rev-parse --abbrev-ref HEAD — ensured I was on the correct branch (master).
+•	git rev-parse --abbrev-ref HEAD: ensured I was on the correct branch (master).
 
 This confirmed I was in the right repo and safe to proceed.
 
