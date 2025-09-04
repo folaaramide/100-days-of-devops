@@ -14,7 +14,7 @@ For the Nautilus App Development Team (the scenario), the requirement was:
 
 •	Push them to the central origin so the rest of the team can access them.
 
-This is exactly the kind of task DevOps engineers and SREs handle when supporting application teams — bridging the gap between development workflow and reliable operations.
+This is exactly the kind of task DevOps engineers and SREs handle when supporting application teams - bridging the gap between development workflow and reliable operations.
 
 ## Steps I Took
 1. Access and Permissions
