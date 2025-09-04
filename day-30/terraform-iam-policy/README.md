@@ -37,7 +37,7 @@ find . -maxdepth 1 -type f -name "*.tf" -print
 ![Screenshot](screenshots/directory-set-up.png)
 
 Step 2: Write the main.tf
-![Screenshot](screenshots/main,tf.png)
+![Screenshot](screenshots/main.tf.png)
 
 Step 3: Initialize Terraform
 terraform fmt
