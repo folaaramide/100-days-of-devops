@@ -43,7 +43,7 @@ git --no-pager log --oneline --graph --decorate --all -20
 
 •	Found 11 noisy commits, including the ones we want:
 
-o	c7506cf initial commit
+-c7506cf initial commit
 
 ![Screenshot](screenshots/log-before.png)
 
@@ -108,13 +108,3 @@ git log origin/master --oneline -2
 •	This skill is essential in DevOps pipelines, especially when enforcing quality and compliance in version control.
 
 •	Day 30 reinforces the importance of discipline in source control — a critical foundation for CI/CD and cloud-native DevOps practices.
-
-📸 Screenshot Index
-Step	Screenshot	Description
-1	01-repo-status.png	Repo status & branch details
-2	02-log-before.png	Original long commit history
-3	03-reset-hard.png	Reset branch to initial commit
-4	04-cherry-pick.png	Cherry-pick successful
-5	05-log-after.png	Clean two-commit history
-6	06-push-force.png	Force push to remote
-7	07-remote-verify.png	Remote commit log verification
