@@ -34,52 +34,10 @@ vi main.tf
 ls -la
 
 find . -maxdepth 1 -type f -name "*.tf" -print
-📸 Screenshot: D30_01_directory_setup.png – showing only main.tf in /home/bob/terraform.
+![Screenshot](screenshots/directory-set-up.png)
 
 Step 2: Write the main.tf
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Build the read-only EC2 policy document
-data "aws_iam_policy_document" "ec2_read_only" {
-  statement {
-    sid    = "EC2ReadOnly"
-    effect = "Allow"
-
-    actions = [
-      "ec2:DescribeInstances",
-      "ec2:DescribeInstanceStatus",
-      "ec2:DescribeImages",
-      "ec2:DescribeSnapshots",
-      "ec2:DescribeVolumes",
-      "ec2:DescribeSecurityGroups",
-      "ec2:DescribeTags",
-      "ec2:DescribeKeyPairs",
-      "ec2:DescribeAddresses",
-      "ec2:DescribeRegions",
-      "ec2:DescribeAvailabilityZones"
-    ]
-
-    resources = ["*"]
-  }
-}
-
-resource "aws_iam_policy" "iampolicy_ravi" {
-  name        = "iampolicy_ravi"
-  description = "Read-only EC2 console access (view instances, AMIs, snapshots)"
-  policy      = data.aws_iam_policy_document.ec2_read_only.json
-}
-📸 Screenshot: D30_02_main_tf_editor.png – showing the main.tf open in VS Code.
+![Screenshot](screenshots/main,tf.png)
 
 Step 3: Initialize Terraform
 terraform fmt
@@ -87,23 +45,21 @@ terraform fmt
 terraform init
 
 terraform validate
-📸 Screenshot: D30_03_init_validate.png – output of terraform init and terraform validate.
+![Screenshot](screenshots/terraform-init.png)
 
 Step 4: Plan and Apply
 
 terraform plan -out=tfplan
 
 terraform apply -auto-approve
-📸 Screenshot: D30_04_plan_apply.png – Terraform apply showing creation of the policy.
+![Screenshot](screenshots/terraform-apply.png)
 
-Step 5 : Verify in Terraform State
+Step 5: Verify in Terraform State
 
 terraform state list
 
 terraform state show aws_iam_policy.iampolicy_ravi
-📸 Screenshot:
-•	D30_05_state_list.png – list of resources in state.
-•	D30_06_state_show.png – showing the policy ARN and JSON document.
+![Screenshot](screenshots/terraform-show.png)
 
 ## Outcome
 •	Created IAM policy iampolicy_ravi in us-east-1.
