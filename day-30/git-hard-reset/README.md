@@ -45,18 +45,14 @@ git --no-pager log --oneline --graph --decorate --all -20
 
 o	c7506cf initial commit
 
-o	080f110 add data.txt file
-📸 Screenshot suggestion:
-•	01-repo-status.png – showing git status and git branch -vv.
-•	02-log-before.png – showing the long commit history.
+![Screenshot](screenshots/log-before.png)
 
 Step 2 - Reset to initial commit
 
 git reset --hard c7506cf
 
 •	Brought the branch back to its very first commit.
-📸 Screenshot suggestion:
-•	03-reset-hard.png – output of reset and a short log showing only the initial commit.
+![Screenshot](screenshots/git-reset.png)
 
 Step 3 – Cherry-pick the meaningful commit
 
@@ -65,8 +61,7 @@ git cherry-pick 080f110
 •	Applied the changes from the add data.txt file commit onto the reset branch.
 
 •	This produced a new commit e6a5233 add data.txt file.
-📸 Screenshot suggestion:
-•	04-cherry-pick.png – showing successful cherry-pick.
+![Screenshot](screenshots/git-cherry-pick.png)
 
 Step 4 – Verify clean history
 
@@ -77,8 +72,8 @@ Result: only two commits remain:
 e6a5233 add data.txt file
 
 c7506cf initial commit
-📸 Screenshot suggestion:
-•	05-log-after.png – clean 2-commit history.
+![Screenshot](screenshots/log-after.png)
+
 
 Step 5 – Push changes safely
 
@@ -89,9 +84,9 @@ git push --force-with-lease origin master
 •	Verified with:
 
 git log origin/master --oneline -2
-📸 Screenshot suggestion:
-•	06-push-force.png – output of force push.
-•	07-remote-verify.png – remote branch log confirming two commits only.
+![Screenshot](screenshots/git-push.png)
+
+![Screenshot](screenshots/verify.png)
 
 ## Outcome
 •	Local and remote repositories now show a minimal, clean commit history.
