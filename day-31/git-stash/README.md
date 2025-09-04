@@ -42,6 +42,7 @@ git stash list
 git stash show --stat stash@{1}
 
 This revealed the developer’s in-progress changes saved in stash@{1}.
+![Screenshot](screenshots/stash-list.png)
 
 4. Restoring the Stash
 
@@ -58,18 +59,21 @@ I staged and committed with a clear message:
 git add -A
 
 git commit -m "Restore stash@{1}"
+![Screenshot](screenshots/commit-restore.png)
 
 6. Pushing to Origin
 
 Finally, I pushed to the remote origin so the changes were available to the team:
 
 git push origin master
+![Screenshot](screenshots/git-push.png)
 
 7. Verification
 
 •	Checked the log with git log --oneline --decorate --graph to ensure the commit was synced with origin/master.
 
 •	Verified git stash list no longer showed stash@{1}.
+![Screenshot](screenshots/task-success.png)
 
 ## Benefits of This Task
 •	For the Business:
@@ -90,17 +94,9 @@ git push origin master
 
 -Learned the importance of matching both technical correctness and business requirements (the test failing until the stash was properly dropped).
 
-📸 Screenshots
-I captured key moments from the workflow (available in this repo):
-•	02-repo-overview.png — checking repo and branch.
-•	03-stash-list.png — confirming stash entries.
-•	05-apply-stash.png — restoring stash changes.
-•	06-commit.png — committing restored changes.
-•	07-push.png — pushing to origin.
-•	08-verify.png — verifying commit on origin/master.
-•	10-stash-pop.png — confirming stash@{1} removed after pop.
-
 ## Reflection
 This task highlighted a subtle but important point: doing the task right vs doing it in a way the business (or grader) expects.
+
 In real DevOps, the same principle applies — it’s not enough to “just make it work”; it must align with team processes, automation, and audit expectations.
+
 I’ll carry this forward as I continue my 100 Days of DevOps journey, building the hands-on skills that employers look for in real-world operations and CI/CD environments.
