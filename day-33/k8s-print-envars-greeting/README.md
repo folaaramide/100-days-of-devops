@@ -27,23 +27,6 @@ Ensures we have the right privileges to create pods in the cluster.
 Step 2: Create Pod Manifest
 
 I created a file called print-envars-greeting.yaml:
-apiVersion: v1
-kind: Pod
-metadata:
-  name: print-envars-greeting
-spec:
-  restartPolicy: Never
-  containers:
-  - name: print-env-container
-    image: bash
-    command: ["/bin/sh", "-c", 'echo "$(GREETING) $(COMPANY) $(GROUP)"']
-    env:
-    - name: GREETING
-      value: "Welcome to"
-    - name: COMPANY
-      value: "DevOps"
-    - name: GROUP
-      value: "Industries"
 📸 Screenshot while editing manifest in terminal: 02-create-manifest.png
 
 Step 3: Apply the Pod
