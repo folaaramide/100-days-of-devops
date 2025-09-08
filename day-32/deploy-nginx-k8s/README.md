@@ -25,8 +25,7 @@ Before creating resources, I verified:
 -Node status (kubectl get nodes -o wide)
 
 -My RBAC permissions to create deployments and services (kubectl auth can-i ...).
-📸 Screenshot Suggestion
-•	01-cluster-nodes.png → showing cluster info and node readiness.
+![Screenshot](screenshots/cluster-nodes.png)
 
 Step 2 - Created Deployment (nginx-deployment.yaml)
 I defined a Kubernetes Deployment that:
@@ -36,17 +35,12 @@ I defined a Kubernetes Deployment that:
 •	Names the container nginx-container.
 
 •	Ensures 3 replicas for high availability.
-📸 Screenshot Suggestion
-•	02-deployment-created.png → output of kubectl get deployments showing 3 replicas.
-•	03-pods-running.png → output of kubectl get pods -o wide showing pods distributed across the node.
-
+![Screenshot](screenshots/pods-running.png)
 Step 3 - Created NodePort Service (nginx-service.yaml)
 I exposed the deployment using a NodePort service so it could be accessed from outside the cluster.
 
 The service listens on port 80 and exposes it on nodePort 30011.
-📸 Screenshot Suggestion
-•	04-service-created.png → output of kubectl get svc nginx-service -o wide.
-
+![Screenshot](screenshots/service-created.png)
 Step 4 - Verified Access to the Website
 
 •	First, I tried reaching the service directly via the node IP and port (172.17.0.2:30011), which is the normal method in Kubernetes.
@@ -54,19 +48,12 @@ Step 4 - Verified Access to the Website
 •	Since direct access didn’t work in this lab environment (restricted networking), I used kubectl port-forward to map service port 80 to localhost:8080.
 
 •	Accessed the site successfully with curl http://localhost:8080, which returned the nginx welcome page.
-📸 Screenshot Suggestions
-•	05-port-forward.png → running kubectl port-forward svc/nginx-service 8080:80.
-•	06-curl-localhost.png → curl output showing “Welcome to nginx!”.
-
+![Screenshot](screenshots/curl-local-host.png)
 ## Key Learnings and Business Value
 -Deployments provide self-healing and scalability by maintaining a desired replica count.
 -Services (NodePort in this case) ensure stable access to applications.
 -This exercise simulates how enterprises keep their customer websites always available, regardless of traffic or node failures.
 -Practicing these tasks demonstrates my ability to design, implement, and troubleshoot Kubernetes workloads in real-world environments.
-
-📂 Project Artifacts
-•	nginx-deployment.yaml
-•	nginx-service.yaml
 
 ## Reflection
 1. This project reinforced my understanding of high availability and scalability in Kubernetes.
