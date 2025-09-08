@@ -1,4 +1,4 @@
-On Day 32 I performed a safe rebase of a long-running `feature` branch onto the current `master` without creating merge commits, and pushed the rebased branch back to the bare repo. This preserves a clean, linear commit history while keeping the feature work intact — an important task in CI/CD pipelines and release workflows.
+On Day 32 I performed a safe rebase of a long-running `feature` branch onto the current `master` without creating merge commits, and pushed the rebased branch back to the bare repo. This preserves a clean, linear commit history while keeping the feature work intact, an important task in CI/CD pipelines and release workflows.
 
 
 ## Business need & value
