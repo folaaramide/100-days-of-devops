@@ -20,7 +20,7 @@ The main business benefits include:
 Step 1: Create Pod Manifest
 
 I created a file called print-envars-greeting.yaml:
-![Screenshot](screenshots/print-envars-greetings.png)
+![Screenshot](screenshots/print-envars-greetings.yaml.png)
 
 Step 2: Apply the Pod
 
