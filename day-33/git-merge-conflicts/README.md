@@ -15,14 +15,6 @@ Remote origin: http://git.stratos.xfusioncorp.com/sarah/story-blog.git
 
 -Demonstrate real-world DevOps workflow, including SSH access, permissions management, rebasing, and conflict resolution.
 
-Files in the Repository
-File Name	Purpose
-story-index.txt	Master list of all story titles
-lion-and-mouse.txt	Story content for “The Lion and the Mouse”
-frogs-and-ox.txt	Story content for “The Frogs and the Ox”
-fox-and-grapes.txt	Story content for “The Fox and the Grapes”
-.git/	Git repository metadata and history
-
 ## Step-by-Step Workflow
 ### Step 1: SSH to the Storage Server
 
