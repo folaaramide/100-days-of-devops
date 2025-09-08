@@ -17,31 +17,22 @@ The main business benefits include:
 
 ## Step-by-Step Implementation
 
-Step 1: Verify Permissions
-
-kubectl auth can-i create pods --namespace=default
-
-Ensures we have the right privileges to create pods in the cluster.
-📸 Screenshot: 01-auth-check.png
-
-Step 2: Create Pod Manifest
+Step 1: Create Pod Manifest
 
 I created a file called print-envars-greeting.yaml:
-📸 Screenshot while editing manifest in terminal: 02-create-manifest.png
+![Screenshot](screenshots/print-envars-greeting.yaml.png)
 
-Step 3: Apply the Pod
+Step 2: Apply the Pod
 
 kubectl apply -f print-envars-greeting.yaml
-📸 Screenshot showing success message: 03-apply-pod.png
 
-Step 4: Verify Pod Status
+Step 3: Verify Pod Status
 
 kubectl get pods -o wide
 
 The pod should reach Completed/Succeeded since the command exits after printing.
-📸 Screenshot: 04-pod-status.png
 
-Step 5: View Logs
+Step 4: View Logs
 
 kubectl logs -f print-envars-greeting
 
@@ -49,9 +40,7 @@ Output:
 
 Welcome to DevOps Industries
 
-📸 Screenshot showing logs output: 05-logs-output.png
-
-Step 6: Describe Pod (for Validation)
+Step 5: Describe Pod (for Validation)
 
 kubectl describe pod print-envars-greeting
 
@@ -62,8 +51,7 @@ This confirms:
 -Restart policy = Never
 
 -Exit code = 0
-📸 Screenshot: 06-describe-pod.png
-
+![Screenshot](screenshots/describe-pod.png)
 ## Key Learnings & Benefits
 1. Learned how Kubernetes Pods can be configured with runtime environment variables, crucial for modern microservices.
 2. Reinforced the importance of restart policies (Never ensures batch jobs exit cleanly without loops).
