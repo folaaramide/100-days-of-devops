@@ -14,5 +14,3 @@ if [ $CHANGED_MASTER -eq 1 ] || [ -z "$@" ]; then
     fi
 fi
 EOF
-sudo chmod +x /opt/cluster.git/hooks/post-update
-ENDSSH
