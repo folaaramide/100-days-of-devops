@@ -66,7 +66,6 @@ terraform plan    # should show: No changes. Your infrastructure matches the con
 aws kinesis describe-stream --stream-name devops-stream --region us-east-1 --no-paginate
 
 •	Confirms the stream exists and is ACTIVE
-📸 Screenshots:
 ![Screenshot](screenshots/aws-describe.png)
 
 Step 7: Reapply if tags were missing
@@ -78,7 +77,7 @@ terraform apply -auto-approve
 
 terraform plan
 
-![Screenshot](screenshots/final-plan.png)
+![Screenshot](screenshots/terraform-final-plan.png)
 
 ## Key Learnings & Benefits
 •	Practiced Terraform workflow: init → validate → plan → apply → verify
