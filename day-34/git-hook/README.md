@@ -78,7 +78,7 @@ remote: Tag release-2025-09-09 created.
 
 Purpose: Triggers the post-update hook to create the release tag.
 
-![Screenshot](screenshots/merge_feature.png)
+![Screenshot](screenshots/merge_feature_master.png)
 
 7. Verify Tag Creation
 
