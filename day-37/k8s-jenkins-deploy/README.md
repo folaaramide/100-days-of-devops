@@ -76,7 +76,6 @@ Purpose:
 -Ensures container is running correctly.
 
 -Retrieves the initial admin password for Jenkins login.
-
 ![Screenshot](screenshots/jenkins-pod-password.png)
 
 5. Access Jenkins UI
