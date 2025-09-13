@@ -26,27 +26,26 @@ kubectl get ns nautilus
 3. **Exposed the deployment via a NodePort service (`httpd-service`) on port `30008`.**  
    ![Screenshot](screenshots/httpd-service.png)
 
-3. **Verified the initial rollout** — pods running `httpd:2.4.27`.  
+4. **Verified the initial rollout** — pods running `httpd:2.4.27`.  
 ![Screenshot](screenshots/deployment-verify.png)
 
 
-4. **Upgraded the deployment to `httpd:2.4.43`** with a rolling update.  
+5. **Upgraded the deployment to `httpd:2.4.43`** with a rolling update.  
   ![Screenshot](screenshots/upgrade-rollout.png)
 
-5. **Confirmed new pods are running the upgraded version.**  
+6. **Confirmed new pods are running the upgraded version.**  
    ![Screenshot](screenshots/pods-initial.png)
 
-6. **Checked rollout history** (revisions 1 and 2).  
+7. **Checked rollout history** (revisions 1 and 2).  
 ![Screenshot](screenshots/rollout-history.png)
 
-7. **Performed a rollback** to the previous version (`httpd:2.4.27`).  
+8. **Performed a rollback** to the previous version (`httpd:2.4.27`).  
 ![Screenshot](screenshots/rollback.png)
 
-8. **Verified pods reverted to the original version.**  
+9. **Verified pods reverted to the original version.**  
 ![Screenshot](screenshots/rollback-status.png)
 
-
-9. **Exec’d into a pod** to inspect running processes and web content, then cleanly exited.  
+10. **Exec’d into a pod** to inspect running processes and web content, then cleanly exited.  
     ![Screenshot](screenshots/pod-inspect.png)
 
 ## Key Takeaways
