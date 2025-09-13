@@ -36,8 +36,8 @@ Purpose:
 2. Create the Jenkins Service
 ![Screenshot](screenshots/jenkins-namespace.png)
 
-# jenkins-service.yaml
-![Screenshot](screenshots/jenkins-service.yaml.png)
+**jenkins-service.yaml**
+![Screenshot](screenshots/jenkins-service-describe.yaml.png)
 
 kubectl apply -f jenkins-service.yaml
 
@@ -52,7 +52,7 @@ Purpose & Business Context:
 •	Enables developers and CI/CD pipelines to access Jenkins securely.
 
 3. Create the Jenkins Deployment
-# jenkins-deployment.yaml
+**jenkins-deployment.yaml**
 ![Screenshot](screenshots/jenkins-deployment.yaml.png)
 
 **Purpose & Business Context:**
