@@ -33,11 +33,11 @@ Purpose:
 
 •	Supports multiple environments/projects in the same cluster.
 
-Screenshot suggestion: day35-namespace.png – showing kubectl get ns output.
-
 2. Create the Jenkins Service
+![Screenshot](screenshots/jenkins-namespace.png)
 
 # jenkins-service.yaml
+![Screenshot](screenshots/jenkins-service.yaml.png)
 
 kubectl apply -f jenkins-service.yaml
 
@@ -50,10 +50,11 @@ Purpose & Business Context:
 •	Exposes Jenkins to the cluster and externally via NodePort.
 
 •	Enables developers and CI/CD pipelines to access Jenkins securely.
-Screenshot suggestion: day35-service.png – showing NodePort mapping and endpoints.
 
 3. Create the Jenkins Deployment
 # jenkins-deployment.yaml
+![Screenshot](screenshots/jenkins-deployment.yaml.png)
+
 **Purpose & Business Context:**
 
 -Runs Jenkins as a containerized app, ensuring portability and consistent environments.
@@ -61,7 +62,6 @@ Screenshot suggestion: day35-service.png – showing NodePort mapping and endpoi
 -Using replicas: 1 simplifies lab verification while demonstrating deployment strategies.
 
 -Rolling updates strategy ensures minimal downtime for future scaling.
-Screenshot suggestion: day35-deployment.png – showing pod status as Running.
 
 4. Verify Jenkins Pod & Logs
 
@@ -76,7 +76,7 @@ Purpose:
 -Ensures container is running correctly.
 
 -Retrieves the initial admin password for Jenkins login.
-Screenshot suggestion: day35-logs.png – tail of Jenkins startup logs showing initialization.
+![Screenshot](screenshots/pod-password.png)
 
 5. Access Jenkins UI
 
@@ -91,7 +91,15 @@ Outcome:
 
 •	Admin password retrieved in step 4 allows initial setup.
 
-Screenshot suggestion: day35-jenkins-ui.png – Jenkins login screen with admin password prompt.
+![Screenshot](screenshots/jenkins-ui.png)
+
+kubectl apply -f jenkins-deployment.yaml
+
+kubectl -n jenkins get deployment
+
+kubectl -n jenkins rollout status deployment/jenkins-deployment
+
+kubectl -n jenkins get pods -o wide
 
 ## Key Learnings & Benefits
 1.	Kubernetes Namespaces enable environment separation.
