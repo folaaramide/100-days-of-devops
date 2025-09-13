@@ -5,11 +5,11 @@ As part of my **100 Days of DevOps journey**, today I focused on testing **deplo
 ## Business Need
 In production systems, downtime is costly. Businesses demand:
 
--**High availability** — updates must not take the entire service offline.
+-**High availability** - updates must not take the entire service offline.
 
--**Controlled risk** — new images should roll out gradually.
+-**Controlled risk** - new images should roll out gradually.
 
--**Quick recovery** — rollback mechanisms must restore service if an upgrade fails.
+-**Quick recovery** - rollback mechanisms must restore service if an upgrade fails.
 
 This exercise helps address those needs by practicing **rolling updates with rollback** on a deployment running Apache HTTPD.
 
