@@ -40,6 +40,7 @@ I launched the container named nginx_1 in detached mode:
 sudo docker run -d --name nginx_1 nginx:alpine
 
 -Detached mode ensures the container runs in the background.
+
 -Assigning a meaningful name (nginx_1) helps manage containers easily in production.
 ![Screenshot](screenshots/docker-run.png)
 
@@ -60,4 +61,4 @@ This validated that the service was correctly deployed.
 
 -Real-world DevOps value → Deploying Nginx, a commonly used web server, mirrors real enterprise use cases.
 
--Business impact → This skill demonstrates the ability to quickly provision lightweight, reliable services—critical for scalability and uptime in production environments.
+-Business impact → This skill demonstrates the ability to quickly provision lightweight, reliable services, critical for scalability and uptime in production environments.
