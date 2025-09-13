@@ -37,7 +37,7 @@ Purpose:
 ![Screenshot](screenshots/jenkins-namespace.png)
 
 **jenkins-service.yaml**
-![Screenshot](screenshots/jenkins-service-describe.yaml.png)
+![Screenshot](screenshots/jenkins-service.yaml.png)
 
 kubectl apply -f jenkins-service.yaml
 
@@ -76,7 +76,8 @@ Purpose:
 -Ensures container is running correctly.
 
 -Retrieves the initial admin password for Jenkins login.
-![Screenshot](screenshots/pod-password.png)
+
+![Screenshot](screenshots/jenkins-pod-password.png)
 
 5. Access Jenkins UI
 
