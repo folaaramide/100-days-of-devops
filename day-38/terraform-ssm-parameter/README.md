@@ -26,17 +26,6 @@ Creating this parameter ensures **safe, repeatable, and auditable infrastructure
 
 vi main.tf
 ![Screenshot](screenshots/main.tf.png)
-hcl
-Copy code
-provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_ssm_parameter" "datacenter_param" {
-  name  = "datacenter-ssm-parameter"
-  type  = "String"
-  value = "datacenter-value"
-}
 
 3. Initialise Terraform
 
