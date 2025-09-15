@@ -28,7 +28,7 @@ sudo docker --version || echo "docker not found"
 
 sudo docker pull busybox:musl
 
-![Screenshot](screenshots/busybox_musl.png)
+![Screenshot](screenshots/puul_busybox_musl.png)
 
 3. Verified the image was pulled
 
