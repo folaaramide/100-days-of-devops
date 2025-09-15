@@ -27,36 +27,32 @@ pwd
 
 2. **Create main.tf file**
 
-nano main.tf
+vi main.tf
 
-Screenshot: 02_main_tf_content.png
+![Screenshot](screenshots/main.tf.png)
 
 3. Initialise Terraform
 
 terraform init
-Screenshot: 03_terraform_init.png
 
 4. **Validate Terraform configuration**
 
 terraform validate
-Screenshot: 04_terraform_validate.png
 
 5. **Plan Terraform changes**
 
-sudo terraform plan
-Screenshot: 05_terraform_plan.png
+terraform plan
 
 6. **Apply Terraform plan**
-
-sudo terraform apply tfplan
-Screenshot: 06_terraform_apply.png
-
+![Screenshot](screenshots/terraform_plan.png)
+terraform apply tfplan
+![Screenshot](screenshots/terraform_apply.png)
 7. **Verify CloudWatch log group and stream using AWS CLI**
 
 aws logs describe-log-groups --log-group-name-prefix devops-log-group --region us-east-1
 
 aws logs describe-log-streams --log-group-name devops-log-group --region us-east-1
-Screenshot: 07_aws_cloudwatch_verify.png
+![Screenshot](screenshots/aws_cloudwatch_verify.png)
 
 
 ## Benefits
