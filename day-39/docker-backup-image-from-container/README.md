@@ -39,9 +39,7 @@ sudo docker start ubuntu_latest
 3. **Committed the running container into a new image**
 
 sudo docker commit -a "Afolabi Aramide / DevOps Team" \
-
   -m "Backup: create official:nautilus from ubuntu_latest" \
-  
   ubuntu_latest official:nautilus
 
 ![Screenshot](screenshots/commit_new_image.png)
@@ -56,9 +54,8 @@ sudo docker images | grep official || true
 5. **Inspected the new image for metadata**
 
 sudo docker image inspect official:nautilus \
-
   --format '{{.Id}} - Created: {{.Created}} - Author: {{.Author}} - Comment: {{.Comment}}'
-![Screenshot](screenshots/inspect_image.png)
+![Screenshot](screenshots/inspect_images.png)
 
 ## Benefits of the Task
 -Preservation of work: Developer changes are safe from container restarts.
