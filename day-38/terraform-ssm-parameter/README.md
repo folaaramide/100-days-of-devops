@@ -45,7 +45,7 @@ terraform plan
 
 terraform apply tfplan
 
-Screenshot: 06_terraform_plan_apply.png
+![Screenshot](screenshots/terraform_plan_apply.png)
 
 6. Verify SSM parameter exists using AWS CLI
 
