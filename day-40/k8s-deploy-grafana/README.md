@@ -32,7 +32,7 @@ kubectl get deployments,svc -o wide | grep grafana
 kubectl rollout status deployment/grafana-deployment-nautilus --timeout=120s
 
 kubectl get pods -l app=grafana -o wide
-![Screenshot](screenshots/pods_status.png)
+![Screenshot](screenshots/pod_status.png)
 
 5.	Verify NodePort Service
 
@@ -43,7 +43,7 @@ kubectl describe svc grafana-service-nautilus
 
 6.	Access Grafana via Lab GUI
 
-![Screenshot](screenshots/rafana_login.png)
+![Screenshot](screenshots/grafana_login.png)
 
 ## Lab Outcome
 -Deployment: grafana-deployment-nautilus running
