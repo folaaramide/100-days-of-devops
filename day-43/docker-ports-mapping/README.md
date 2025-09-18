@@ -10,7 +10,7 @@ Organisations frequently deploy Nginx as:
 
 A reverse proxy for microservices
 
-A lightweight web server for static or containerized apps
+A lightweight web server for static or containerised apps
 
 A secure gateway mapped to custom host ports
 
