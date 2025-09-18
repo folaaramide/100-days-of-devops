@@ -37,29 +37,6 @@ Defined Tomcat deployment with 1 replica, container port 8080, and image gcr.io/
 
 tomcat-deployment.yaml
 
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: tomcat-deployment-datacenter
-  namespace: tomcat-namespace-datacenter
-  labels:
-    app: tomcat-datacenter
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: tomcat-datacenter
-  template:
-    metadata:
-      labels:
-        app: tomcat-datacenter
-    spec:
-      containers:
-      - name: tomcat-container-datacenter
-        image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
-        ports:
-        - containerPort: 8080
-
 kubectl apply -f tomcat-deployment.yaml
 
 kubectl -n tomcat-namespace-datacenter get deployments
@@ -71,21 +48,6 @@ kubectl -n tomcat-namespace-datacenter get pods -o wide
 Exposed the Tomcat app via a Service of type NodePort.
 
 tomcat-service.yaml
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: tomcat-service-datacenter
-  namespace: tomcat-namespace-datacenter
-spec:
-  type: NodePort
-  selector:
-    app: tomcat-datacenter
-  ports:
-    - protocol: TCP
-      port: 8080
-      targetPort: 8080
-      nodePort: 32227
 
 kubectl apply -f tomcat-service.yaml
 
