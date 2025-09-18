@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tomcat-deployment-datacenter
+  namespace: tomcat-namespace-datacenter
+  labels:
+    app: tomcat-datacenter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat-datacenter
+  template:
+    metadata:
+      labels:
+        app: tomcat-datacenter
+    spec:
+      containers:
+      - name: tomcat-container-datacenter
+        image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
+        ports:
+        - containerPort: 8080
