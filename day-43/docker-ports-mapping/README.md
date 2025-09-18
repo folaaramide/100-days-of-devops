@@ -35,7 +35,7 @@ Downloaded the lightweight Nginx Alpine image for efficient deployment.
 
 sudo docker pull nginx:alpine
 
-📸 Suggested screenshot: 03-docker-pull.png
+![Screenshot](screenshots/docker-pull.png)
 
 **4. Removed Old Containers (if any)**
 
@@ -52,7 +52,7 @@ sudo docker run -d --name apps \
   -p 3000:80 \
   nginx:alpine
 
-📸 Suggested screenshot: 05-docker-run.png
+![Screenshot](screenshots/docker-run.png)
 
 **6. Verified Running Container**
 
@@ -62,10 +62,10 @@ sudo docker ps --filter "name=apps" --format "table {{.ID}}\t{{.Names}}\t{{.Imag
 
 sudo docker inspect --format='{{json .NetworkSettings.Ports}}' apps
 
-📸 Suggested screenshot: 06-docker-ps.png
-📸 Suggested screenshot: 07-docker-inspect.png
+![Screenshot](screenshots/docker-ps.png)
+![Screenshot](screenshots/docker-inspect.png)
 
-## 🚀 Outcome
+## Outcome
 
 -Successfully launched Nginx container (apps) on host port 3000.
 
