@@ -37,10 +37,10 @@ terraform init
 **4️. Plan and Apply**
 
 terraform plan
-![Screenshot](screenshots/terraoform-plan.png)
+![Screenshot](screenshots/terraform-plan.png)
 
 terraform apply -auto-approve
-![Screenshot](screenshots/stack-created.png)
+![Screenshot](screenshots/stack-complete.png)
 
 **5️. Verify**
 terraform show
