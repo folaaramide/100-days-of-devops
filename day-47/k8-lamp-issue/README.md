@@ -83,11 +83,5 @@ Downtime issue resolved, ensuring business continuity.
 
 -Lab passed successfully
 
-Suggested Screenshots for README/Gallery
-PNG	Description
-wordpress_pods.png	Pod and service status overview
-wordpress_php_fix.png	PHP environment variable fix inside container
-wordpress_nodeport.png	NodePort service working and tested via curl
-
 This README continues the story of Day 47 in my 100 Days of DevOps journey, highlighting hands-on troubleshooting, Kubernetes debugging, and business-oriented solutions.
 
