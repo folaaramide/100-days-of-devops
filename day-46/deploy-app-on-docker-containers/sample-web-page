@@ -1,0 +1,5 @@
+sudo tee /var/www/html/index.php > /dev/null <<'PHP'
+<?php
+echo "Hello from php_blog container!";
+?>
+PHP
