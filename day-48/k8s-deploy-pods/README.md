@@ -1,4 +1,4 @@
-# Day 2 - Kubernetes Nginx Deployment
+# Day 48 - Kubernetes Nginx Deployment
 
 ## Task Summary
 As part of the **Nautilus DevOps project**, I worked on deploying a containerized web server (`nginx`) using **Kubernetes**.
