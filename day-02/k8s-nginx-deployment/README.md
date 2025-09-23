@@ -1,24 +1,22 @@
-# 🚀 Day 1 (Part 2) - Kubernetes Nginx Deployment
+# Day 2 - Kubernetes Nginx Deployment
 
-## 📘 Task Summary
-
+## Task Summary
 As part of the **Nautilus DevOps project**, I worked on deploying a containerized web server (`nginx`) using **Kubernetes**.
 
-> The lab environment provided a **pre-configured Kubernetes cluster** accessible via `kubectl` on the `jump_host`. This mimics real-world access where DevOps engineers operate from secure jump servers.
+The lab environment provided a **pre-configured Kubernetes cluster** accessible via `kubectl` on the `jump_host`. This mimics real-world access where DevOps engineers operate from secure jump servers.
 
 ---
 
-## 🎯 Objectives
+## Objectives
+-Create a Kubernetes **deployment** named `nginx`
 
-✅ Create a Kubernetes **deployment** named `nginx`
+-Use the image `nginx:latest`
 
-✅ Use the image `nginx:latest`
-
-✅ Verify that the deployment and pods are running successfully
+-Verify that the deployment and pods are running successfully
 
 ---
 
-## 💻 Commands Used
+## Commands Used
 
 ### Create deployment with explicit image tag
 kubectl create deployment nginx --image=nginx:latest
@@ -35,7 +33,7 @@ kubectl describe deployment nginx
 ![Description	Screenshot](./screenshots/deployment-description.png)
 ![Deployment created and verified with pods running](./screenshots/created-deployments-pods-running.png)			
 
-## 📈 Business Context & Relevance
+## Business Context & Relevance
 In modern microservices architectures, Kubernetes is used to deploy, scale, and manage applications efficiently.
 
 This task simulates a typical DevOps responsibility:
@@ -48,13 +46,13 @@ Ensuring repeatable, declarative deployments
 
 Such practices align with:
 
-🔐 Security policies (centralized access via jump host)
+-Security policies (centralized access via jump host)
 
-🔄 CI/CD pipelines
+-CI/CD pipelines
 
-📊 Uptime and scaling demands in production
+-Uptime and scaling demands in production
 
-## 🧠 Skills Demonstrated
+## Skills Demonstrated
 Kubernetes CLI (kubectl)
 
 Deployment and pod lifecycle
@@ -63,7 +61,7 @@ Docker image handling in K8s
 
 Working in restricted/provisioned environments (jump host → K8s cluster)
 
-## 🔗 Related DevOps Concepts
+## Related DevOps Concepts
 Kubernetes (K8s)
 
 Container orchestration
