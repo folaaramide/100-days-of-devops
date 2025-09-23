@@ -4,7 +4,7 @@
 On Day 47 of my #100DaysOfDevOps journey, I containerised a Python application and deployed it on App Server 3. The task involved creating a Dockerfile, building a Docker image, running the container with proper port mapping, and testing the app with curl.
 
 ## Business Need:
-Containerising applications ensures consistent deployment across environments, reduces dependency issues, and accelerates delivery — critical for xFusionCorp Industries’ DevOps pipeline. This task mimics real-world requirements where apps must run reliably on production servers.
+Containerising applications ensures consistent deployment across environments, reduces dependency issues, and accelerates delivery, these are critical for xFusionCorp Industries’ DevOps pipeline. This task mimics real-world requirements where apps must run reliably on production servers.
 
 ## Step-by-Step Task & Commands:
 
