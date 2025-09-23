@@ -20,9 +20,6 @@ sudo test -f /python_app/src/server.py && echo "server.py found"
 
 sudo docker --version
 
-
-Screenshot: 01_verify_files.png — Verify server.py and requirements.txt.
-
 **2. Create Dockerfile under /python_app:**
 ```
 sudo tee /python_app/Dockerfile > /dev/null <<'EOF'
@@ -36,7 +33,6 @@ CMD ["python3", "server.py"]
 EOF
 sudo cat /python_app/Dockerfile
 ```
-Screenshot: 02_dockerfile.png — Dockerfile content.
 
 **3. Build Docker image nautilus/python-app:**
 
@@ -46,8 +42,6 @@ sudo docker build -t nautilus/python-app .
 
 sudo docker images | grep nautilus
 
-Screenshot: 03_docker_build.png — Docker image built successfully.
-
 **4. Run container pythonapp_nautilus (host 8091 → container 6100):**
 
 sudo docker rm -f pythonapp_nautilus 2>/dev/null || true
@@ -56,8 +50,6 @@ sudo docker run -d --name pythonapp_nautilus -p 8091:6100 nautilus/python-app
 
 sudo docker ps -a --filter "name=pythonapp_nautilus"
 
-Screenshot: 04_docker_run.png — Container running & port mapped.
-
 **5. Test the application with curl:**
 
 curl -sS http://localhost:8091/
@@ -65,8 +57,6 @@ curl -sS http://localhost:8091/
 **Expected output:**
 
 Welcome to xFusionCorp Industries!
-
-Screenshot: 05_curl_test.png — App responding successfully.
 
 ## Business Value of Task:
 -Ensures consistent runtime for Python apps across servers.
