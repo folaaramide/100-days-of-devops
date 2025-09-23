@@ -26,13 +26,9 @@ cd /opt/sysops
 **3. Create Sample Web File**
 
 sudo tee /var/www/html/index.php > /dev/null <<'PHP'
-
 <?php
-
 echo "Hello from php_blog container!";
-
 ?>
-
 PHP
 
 sudo chmod 644 /var/www/html/index.php
