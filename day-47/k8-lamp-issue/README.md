@@ -19,14 +19,15 @@ Ensuring web applications are reliably available on Kubernetes is critical for b
 kubectl get pods -n default -o wide
 kubectl get svc lamp-service -n default -o wide
 kubectl get nodes -o wide
-Screenshot: wordpress_pods.png
+
+![Screenshot](screenshots/wordpress_pods.png)
 ```
-Label Suggestion: “Pods & Service Status”
-
 **2. Check Application Logs**
+```
 kubectl logs lamp-wp-56c7c454fc-fsr6n -c httpd-php-container -n default
-
+```
 Identified PHP parse errors due to incorrect environment variable usage.
+![Screenshot](screenshots/wordpress_php_logs.png)
 
 **3. Inspect and Fix PHP Application**
 ```
@@ -45,11 +46,10 @@ $connect = mysqli_connect($dbhost, $dbuser, $dbpass) or die("Unable to Connect t
 $test_query = "SHOW TABLES FROM $dbname";
 ```
 Tested connection locally:
-
+```
 curl -s http://localhost/ | head -n 20
-Screenshot: wordpress_php_fix.png
-
-Label Suggestion: “PHP Environment Variable Fix”
+```
+![Screenshot](screenshots/wordpress_php_fix.png)
 
 **4. Verify Service & Ports**
 ```
@@ -60,9 +60,7 @@ curl -s http://172.17.0.2:30008/ | head -n 20
 ```
 Corrected NodePort misconfiguration: targetPort 80 to match container port.
 
-Screenshot: wordpress_nodeport.png
-
-Label Suggestion: “NodePort Access Test”
+![Screenshot](screenshots/wordpress_nodeport.png)
 
 **5. Confirm Full Application Functionality**
 Application connects successfully to MySQL.
@@ -70,6 +68,7 @@ Application connects successfully to MySQL.
 NodePort service is accessible externally.
 
 Downtime issue resolved, ensuring business continuity.
+![Screenshot](screenshots/app_working.png)
 
 ## Benefits & Learning
 1. Hands-on troubleshooting of a live Kubernetes deployment.
