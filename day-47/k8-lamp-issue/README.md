@@ -19,9 +19,8 @@ Ensuring web applications are reliably available on Kubernetes is critical for b
 kubectl get pods -n default -o wide
 kubectl get svc lamp-service -n default -o wide
 kubectl get nodes -o wide
-
-![Screenshot](screenshots/wordpress_pods.png)
 ```
+![Screenshot](screenshots/wordpress_pods.png)
 **2. Check Application Logs**
 ```
 kubectl logs lamp-wp-56c7c454fc-fsr6n -c httpd-php-container -n default
