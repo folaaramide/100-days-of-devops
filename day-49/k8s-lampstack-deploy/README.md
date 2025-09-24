@@ -27,7 +27,7 @@ Companies running PHP applications often rely on the **LAMP stack (Linux, Apache
 kubectl create configmap php-config \
   --from-literal=php.ini='variables_order = "EGPCS"'
 ````
-configmap.png
+![Screenshot](screenshots/configmap.png)
 
 **Verify:**
 ```
@@ -49,7 +49,7 @@ kubectl get configmap php-config -o yaml
 ```
 kubectl get secret mysql-secret -o yaml
 ```
-secret.png
+![Screenshot](screenshots/secret.png)
 
 **3️. Create the Deployment + Services**
 Save the following into lamp-wp.yaml:
@@ -65,8 +65,8 @@ kubectl get deploy lamp-wp
 kubectl get pods -l app=lamp-wp -o wide
 kubectl get svc lamp-service mysql-service
 ```
-deployment.png
-services.png
+![Screenshot](screenshots/deployment.png)
+![Screenshot](screenshots/services.png)
 
 **4. Prepare and Copy index.php**
 
@@ -107,12 +107,12 @@ kubectl cp /tmp/index.php "${POD}":/app/index.php -c httpd-php-container
 kubectl exec -it "${POD}" -c httpd-php-container -- ls -l /app
 kubectl exec -it "${POD}" -c httpd-php-container -- head -20 /app/index.php
 ```
-indexphp.png
+![Screenshot](screenshots/indexphp.png)
 
-connected.png
+![Screenshot](screenshots/connected.png)
 **5️. Test Application on Lab browser: Connected successfully**
 
-app_connected.png
+![Screenshot](screenshots/app_connected.png)
 ## Key Files
 
 **lamp-wp.yaml**
