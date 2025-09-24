@@ -1,4 +1,4 @@
-# Day 47 – Fixing WordPress LAMP Stack on Kubernetes
+# Day 47 - Fixing WordPress LAMP Stack on Kubernetes
 
 **Project:** WordPress LAMP Stack Troubleshooting & Service Fix  
 
