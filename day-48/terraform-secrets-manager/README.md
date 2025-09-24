@@ -26,21 +26,26 @@ By leveraging **AWS Secrets Manager**, secrets are encrypted, rotated automatica
    ```
    { "username": "admin", "password": "Namin123" }
    ```
+![Screenshot](screenshots/main.tf.png)
+
 **2. Initialised Terraform**
 
 ```
 terraform init
 terraform fmt
 terraform validate
-Planned & Applied Infrastructure
 ```
+![Screenshot](screenshots/init.png)
 
+**3. Planned & Applied Infrastructure**
 ```
 terraform plan
 terraform apply -auto-approve
 ```
+![Screenshot](screenshots/plan.png)
+![Screenshot](screenshots/apply.png)
 
-**3. Verified Secret Creation with AWS CLI:**
+**4. Verified Secret Creation with AWS CLI:**
 ```
 aws secretsmanager get-secret-value \
   --secret-id devops-secret \
@@ -53,9 +58,10 @@ Output:
 ```
 {"username":"admin","password":"Namin123"}
 ```
+![Screenshot](screenshots/verify.png)
+
 ## Key File
 **main.tf**
-
 ```
 terraform {
   required_providers {
