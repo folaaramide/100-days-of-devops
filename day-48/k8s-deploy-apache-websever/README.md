@@ -1,4 +1,4 @@
-## Day 48:  Nautilus httpd on Kubernetes (very-very-brief, recruiter-friendly)
+## Day 48:  Nautilus httpd on Kubernetes
 
 Deployed an Apache (httpd:latest) application to a Kubernetes cluster using a single, repeatable manifest — demonstrating namespace isolation, availability (2 replicas) and external access via NodePort. Part of my 100 Days of Devops journey (Day 48).
 
