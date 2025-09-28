@@ -44,15 +44,6 @@ This pattern helps enterprises achieve **faster deployments**, **reliable startu
 
 For GitHub repo and LinkedIn posts:
 
-1. **ic-01_manifest_yaml.png** — Deployment manifest with init + main container.  
-2. **ic-02_apply_output.png** — `kubectl apply` successful creation.  
-3. **ic-03_pod_running.png** — Pod `Running` after init completed.  
-4. **ic-04_logs.png** — Main container logs showing repeated welcome message.  
-5. **ic-05_permissions.png** — `ls -l /ic` and `cat /ic/official` showing file exists.  
-6. **ic-06_cleanup.png** — Deleting resources after validation.
-
----
-
 ## Commands Used
 
 ```
@@ -65,13 +56,13 @@ cd ~/projects/ic-devops
 ```
 vi ic-deploy-devops.yaml
 ```
-
+![Screenshot](screenshots/manifest_yaml.png)
 **2. Apply deployment**
 
 ```
 kubectl apply -f ic-deploy-devops.yaml
 ```
-
+![Screenshot](screenshots/apply_output.png)
 **3. Verify deployment**
 
 ```
@@ -79,37 +70,38 @@ kubectl get deploy ic-deploy-devops -o wide
 kubectl describe deploy ic-deploy-devops
 ```
 
+![Screenshot](screenshots/pod_running.png)
 **4. Check pod**
 
 ```
 kubectl get pods -l app=ic-devops
 POD=$(kubectl get pods -l app=ic-devops -o jsonpath='{.items[0].metadata.name}')
 ```
-
+![Screenshot](screenshots/check-pod.png)
 **5. Inspect pod details**
 
 ```
 kubectl describe pod $POD
 ```
-
+![Screenshot](screenshots/pod_describe.png)
 **6. Logs from init container**
 
 ```
 kubectl logs $POD -c ic-msg-devops
 ```
-
+![Screenshot](screenshots/init_logs.png)
 **7. Logs from main container**
 
 ```
 kubectl logs $POD -c ic-main-devops --tail=20
 ```
-
+![Screenshot](screenshots/container_logs.png)
 **8. Verify file inside main container**
 
 ```
 kubectl exec -it $POD -c ic-main-devops -- /bin/bash -c "ls -l /ic; cat /ic/official"
 ```
-
+![Screenshot](screenshots/verify_container_file.png)
 ## Manifest File
 ic-deploy-devops.yaml:
 
