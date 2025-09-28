@@ -16,7 +16,9 @@ The Nautilus DevOps team needed a Kubernetes deployment template to run a web se
 This solves:
 
 -Pod lifecycle issues → data survives pod restarts.
+
 -Separation of concerns → storage is managed independently of containers.
+
 -Scalability & flexibility → different apps can request storage via PVCs without knowing the backend details.
 
 ---
@@ -35,13 +37,14 @@ kind: PersistentVolume
 metadata:
   name: pv-datacenter
 spec:
-  storageClassName: manual
   capacity:
     storage: 5Gi
   accessModes:
     - ReadWriteOnce
+  storageClassName: manual
   hostPath:
     path: /mnt/security
+    type: DirectoryOrCreate 
 ```
 
 **Commands:**
@@ -168,8 +171,6 @@ curl http://<NodeIP>:30008
 proc-nginx.png (nginx master process running)
 
 curl-localhost.png (403 Forbidden nginx/1.29.1)
-
-nodeport-curl.png (same 403 via NodePort)
 
 ## Outcome
 
