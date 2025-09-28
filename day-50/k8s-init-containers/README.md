@@ -40,10 +40,6 @@ This pattern helps enterprises achieve **faster deployments**, **reliable startu
 
 ---
 
-## 🖼️ Suggested Screenshots
-
-For GitHub repo and LinkedIn posts:
-
 ## Commands Used
 
 ```
