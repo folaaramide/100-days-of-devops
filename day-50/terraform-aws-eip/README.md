@@ -97,6 +97,7 @@ terraform apply "tfplan.out"
 aws ec2 describe-addresses --region us-east-1 \
   --query "Addresses[*].{PublicIp:PublicIp,AllocationId:AllocationId,Tags:Tags}" --output table
 ```
+![Screenshot](screenshots/terraform-describe.png)
 
 ## Benefit
 This lab showed how to codify networking dependencies in Terraform, ensuring AWS resources remain consistent, reliable, and production-ready.
