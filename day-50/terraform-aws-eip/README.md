@@ -32,7 +32,6 @@ For enterprises migrating to AWS, static IPs (Elastic IPs) are critical for:
 ---
 
 **main.tf**
-# Provision EC2 instance
 
 ```
 # Configure the AWS Provider
